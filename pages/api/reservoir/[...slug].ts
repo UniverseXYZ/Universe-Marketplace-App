@@ -1,6 +1,8 @@
 import { setParams } from '@reservoir0x/reservoir-sdk'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+import universeJson from '../../../universe.json';
+
 const RESERVOIR_API_KEY = process.env.NEXT_PUBLIC_RESERVOIR_API_KEY
 const RESERVOIR_API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
 
@@ -36,6 +38,10 @@ const proxy = async (req: NextApiRequest, res: NextApiResponse) => {
     return
   }
 
+  if (endpoint === 'admin/get-marketplaces') {
+    res.status(200).json(universeJson)
+  } else {
+    
   try {
     const options: RequestInit | undefined = {
       method,
@@ -92,6 +98,7 @@ const proxy = async (req: NextApiRequest, res: NextApiResponse) => {
     // 400 Bad Request
     // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
     res.status(400).json(error)
+  }
   }
 }
 
