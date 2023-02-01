@@ -18,7 +18,7 @@ import {
   useTokens,
   useCollections,
   useUserTokens,
-} from '@reservoir0x/reservoir-kit-ui'
+} from '../../../reservoir-kit-ui/src'
 import { useAccount } from 'wagmi'
 
 // Environment variables

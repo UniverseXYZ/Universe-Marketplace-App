@@ -29,7 +29,7 @@ import {
   ReservoirKitProvider,
   ReservoirKitProviderProps,
   ReservoirKitTheme,
-} from '@reservoir0x/reservoir-kit-ui'
+} from '../reservoir-kit-ui/src'
 import { FC, useEffect, useState } from 'react'
 import '@rainbow-me/rainbowkit/styles.css'
 

@@ -7,7 +7,7 @@ import {
   useReservoirClient,
   AcceptBidModal,
   useTokens,
-} from '@reservoir0x/reservoir-kit-ui'
+} from '../../reservoir-kit-ui/src'
 import React, { ComponentPropsWithoutRef, FC, ReactNode, useState } from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { useAccount, useNetwork, useSigner } from 'wagmi'
