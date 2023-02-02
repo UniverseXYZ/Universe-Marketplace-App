@@ -7,8 +7,7 @@ import React, {
   forwardRef,
 } from 'react'
 
-//@ts-ignore
-const Flatpickr = FlatpickrModule.default
+const Flatpickr = FlatpickrModule
 
 type FlatPickrProps = ComponentPropsWithoutRef<typeof Flatpickr>
 
