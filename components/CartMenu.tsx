@@ -7,7 +7,7 @@ import { Execute } from '@reservoir0x/reservoir-sdk'
 import { Signer } from 'ethers'
 import { setToast } from './token/setToast'
 import { useAccount, useBalance, useSigner } from 'wagmi'
-import { useReservoirClient } from '@reservoir0x/reservoir-kit-ui'
+import { useReservoirClient } from '../reservoir-kit-ui/src'
 import cartTokensAtom, {
   getCartCount,
   getCartCurrency,

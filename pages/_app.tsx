@@ -29,7 +29,7 @@ import {
   ReservoirKitProvider,
   ReservoirKitProviderProps,
   ReservoirKitTheme,
-} from '@reservoir0x/reservoir-kit-ui'
+} from '../reservoir-kit-ui/src'
 import { FC, useEffect, useState } from 'react'
 import '@rainbow-me/rainbowkit/styles.css'
 
@@ -68,6 +68,7 @@ const SOURCE_DOMAIN = process.env.NEXT_PUBLIC_SOURCE_DOMAIN
 const API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
 const SOURCE_NAME = process.env.NEXT_PUBLIC_SOURCE_NAME
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
+const MARKETPLACE_FEE = process.env.NEXT_PUBLIC_MARKETPLACE_FEE
 
 const envChain = Object.values(allChains).find(
   (chain) => chain.id === +(CHAIN_ID || allChains.mainnet)
@@ -168,6 +169,7 @@ const App: FC<AppProps & { baseUrl: string }> = ({
       DISABLE_POWERED_BY_RESERVOIR != null,
     source: SOURCE_DOMAIN,
     normalizeRoyalties: true,
+    marketplaceFee: parseInt(MARKETPLACE_FEE || "0")
   }
 
   if (FEE_BPS && FEE_RECIPIENT) {

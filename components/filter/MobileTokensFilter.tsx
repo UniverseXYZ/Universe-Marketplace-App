@@ -1,6 +1,6 @@
 import * as Accordion from '@radix-ui/react-accordion'
 import * as Dialog from '@radix-ui/react-dialog'
-import { useAttributes } from '@reservoir0x/reservoir-kit-ui'
+import { useAttributes } from '../../reservoir-kit-ui/src'
 import { useRouter } from 'next/router'
 import { FC, useEffect, useState } from 'react'
 import { FiChevronUp } from 'react-icons/fi'

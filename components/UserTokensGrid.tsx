@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react'
 import LoadingCard from './LoadingCard'
-import { useUserTokens } from '@reservoir0x/reservoir-kit-ui'
+import { useUserTokens } from '../reservoir-kit-ui/src'
 import { useInView } from 'react-intersection-observer'
 import TokenCard from './TokenCard'
 import { paths } from '@reservoir0x/reservoir-sdk'
