@@ -1,0 +1,13 @@
+{
+  "marketplaces": [
+    {
+      "name": "Universe.XYZ",
+      "imageUrl": "https://www.universe.xyz/favicon.ico",
+      "fee": { "percent": 0.3, "bps": 30 },
+      "feeBps": 0.003,
+      "orderbook": "universe",
+      "orderKind": "universe",
+      "listingEnabled": true
+    }
+  ]
+}
