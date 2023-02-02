@@ -16,6 +16,7 @@ import 'styles/gothicusroman.css'
 import 'styles/roobert.css'
 import 'styles/rodger.css'
 import 'styles/ingrammono.css'
+import 'styles/spacegrotesk.css'
 import type { AppContext, AppProps } from 'next/app'
 import { default as NextApp } from 'next/app'
 import { WagmiConfig, createClient, configureChains } from 'wagmi'
@@ -55,8 +56,8 @@ const THEME_SWITCHING_ENABLED = process.env.NEXT_PUBLIC_THEME_SWITCHING_ENABLED
 const DARK_MODE_ENABLED = process.env.NEXT_PUBLIC_DARK_MODE
 const PROXY_API_BASE = process.env.NEXT_PUBLIC_PROXY_API_BASE
 const RESERVOIR_API_KEY = process.env.NEXT_PUBLIC_RESERVOIR_API_KEY
-const BODY_FONT_FAMILY = process.env.NEXT_PUBLIC_BODY_FONT_FAMILY || 'Inter'
-const FONT_FAMILY = process.env.NEXT_PUBLIC_FONT_FAMILY || 'Inter'
+const BODY_FONT_FAMILY = process.env.NEXT_PUBLIC_BODY_FONT_FAMILY || 'Space Grotesk'
+const FONT_FAMILY = process.env.NEXT_PUBLIC_FONT_FAMILY || 'Space Grotesk'
 const PRIMARY_COLOR = process.env.NEXT_PUBLIC_PRIMARY_COLOR || 'default'
 const DISABLE_POWERED_BY_RESERVOIR =
   process.env.NEXT_PUBLIC_DISABLE_POWERED_BY_RESERVOIR
