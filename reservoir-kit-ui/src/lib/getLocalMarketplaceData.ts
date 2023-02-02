@@ -1,4 +1,6 @@
 import { getClient } from '@reservoir0x/reservoir-sdk'
+import universeJson from '../../../universe.json';
+
 
 export default () => {
   const client = getClient()
@@ -30,6 +32,10 @@ export default () => {
       icon = favicon.getAttribute('href')
     }
   }
+
+  const universeData = JSON.parse(JSON.stringify(universeJson));
+  // Override and add Universe Icon
+  icon = universeData.marketplaces[0].imageUrl;
 
   return {
     title,
