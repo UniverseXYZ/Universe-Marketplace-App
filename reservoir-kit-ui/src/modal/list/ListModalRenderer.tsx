@@ -94,7 +94,7 @@ const isCurrencyAllowed = (
       return true
     }
     switch (marketplace.orderbook) {
-      case 'reservoir':
+      case 'universe':
         return true
       case 'opensea':
         return openseaPaymentTokens.some(
@@ -205,7 +205,7 @@ export const ListModalRenderer: FC<Props> = ({
     })
     const hasNonNativeMarketplace = updatedMarketplaces.find(
       (marketplace) =>
-        marketplace.isSelected && marketplace.orderbook !== 'reservoir'
+        marketplace.isSelected && marketplace.orderbook !== 'universe'
     )
     if (hasNonNativeMarketplace) {
       setQuantity(1)
