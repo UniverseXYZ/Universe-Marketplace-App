@@ -356,6 +356,7 @@ export const ListModalRenderer: FC<Props> = ({
           orderbook: market.orderbook,
           //@ts-ignore
           orderKind: market.orderKind,
+          listingTime: (Date.now()/1000).toFixed()
         }
 
         if (quantity > 1) {

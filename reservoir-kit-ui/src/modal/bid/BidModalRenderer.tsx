@@ -274,6 +274,7 @@ export const BidModalRenderer: FC<Props> = ({
       orderKind: 'universe',
       attributeKey: trait?.key,
       attributeValue: trait?.value,
+      listingTime: (Date.now()/1000).toFixed()
     }
 
     if (tokenId && collectionId) {
