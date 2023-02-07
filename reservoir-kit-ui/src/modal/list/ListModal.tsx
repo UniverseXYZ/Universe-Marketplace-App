@@ -14,6 +14,7 @@ import {
   Button,
   Loader,
   Select,
+  SelectCurrency,
   ErrorWell,
   CryptoCurrencyIcon,
 } from '../../primitives'
@@ -261,16 +262,16 @@ export function ListModal({
                         css={{ mb: '$4', gap: '$2', alignItems: 'center' }}
                       >
                         List item in
-                        <Select
+                        <SelectCurrency
                           trigger={
-                            <Select.Trigger
+                            <SelectCurrency.Trigger
                               css={{
                                 width: 'auto',
                                 p: 0,
                                 backgroundColor: 'transparent',
                               }}
                             >
-                              <Select.Value asChild>
+                              <SelectCurrency.Value asChild>
                                 <Flex align="center">
                                   <CryptoCurrencyIcon
                                     address={currency.contract}
@@ -283,10 +284,10 @@ export function ListModal({
                                   >
                                     {currency.symbol}
                                   </Text>
-                                  <Select.DownIcon style={{ marginLeft: 6 }} />
+                                  <SelectCurrency.DownIcon style={{ marginLeft: 6 }} />
                                 </Flex>
-                              </Select.Value>
-                            </Select.Trigger>
+                              </SelectCurrency.Value>
+                            </SelectCurrency.Trigger>
                           }
                           value={currency.contract}
                           onValueChange={(value: string) => {
@@ -299,11 +300,11 @@ export function ListModal({
                           }}
                         >
                           {currencies.map((option) => (
-                            <Select.Item
+                            <SelectCurrency.Item
                               key={option.contract}
                               value={option.contract}
                             >
-                              <Select.ItemText>
+                              <SelectCurrency.ItemText>
                                 <Flex align="center" css={{ gap: '$1' }}>
                                   <CryptoCurrencyIcon
                                     address={option.contract}
@@ -311,10 +312,10 @@ export function ListModal({
                                   />
                                   {option.symbol}
                                 </Flex>
-                              </Select.ItemText>
-                            </Select.Item>
+                              </SelectCurrency.ItemText>
+                            </SelectCurrency.Item>
                           ))}
-                        </Select>
+                        </SelectCurrency>
                       </Text>
                     ) : (
                       <></>
