@@ -26,6 +26,7 @@ import CollectionActivityTab from 'components/tables/CollectionActivityTab'
 import RefreshButton from 'components/RefreshButton'
 import SortTokens from 'components/SortTokens'
 import MobileTokensFilter from 'components/filter/MobileTokensFilter'
+import { NextSeo } from 'next-seo';
 
 // Environment variables
 // For more information about these variables
@@ -45,6 +46,7 @@ const PROXY_API_BASE = process.env.NEXT_PUBLIC_PROXY_API_BASE
 const metaTitle = process.env.NEXT_PUBLIC_META_TITLE
 const metaDescription = process.env.NEXT_PUBLIC_META_DESCRIPTION
 const metaImage = process.env.NEXT_PUBLIC_META_OG_IMAGE
+const META_URL = process.env.NEXT_PUBLIC_META_URL
 
 const COLLECTION = process.env.NEXT_PUBLIC_COLLECTION
 const COMMUNITY = process.env.NEXT_PUBLIC_COMMUNITY
@@ -121,11 +123,30 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
   return (
     <Layout navbar={{}}>
       <>
-        <Head>
+        <NextSeo
+        title={metaTitle || collection?.name}
+        description={metaDescription || collection?.description}
+        openGraph={{
+          url: META_URL,
+          title: metaTitle || collection?.name,
+          description: metaDescription || collection?.description,
+          images: [
+            {
+              url: metaImage || bannerImage,
+            },
+          ],
+          siteName: 'Universe.xyz Marketplace',
+        }}
+        twitter={{
+          handle: '@universe_xyz',
+          cardType: 'summary_large_image',
+        }}
+        />
+        {/* <Head>
           {title}
           {description}
           {image}
-        </Head>
+        </Head> */}
         <Hero collectionId={id} fallback={fallback} />
         <Tabs.Root
           value={router.query?.tab?.toString() || 'items'}
