@@ -120,6 +120,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
     { name: 'Activity', id: 'activity' },
   ]
 
+  console.log(collection?.banner);
   return (
     <Layout navbar={{}}>
       <>
@@ -131,7 +132,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           description: collection?.description,
           images: [
             {
-              url: bannerImage,
+              url: collection?.banner || 'missing image',
               width: 800,
               height: 600,
               alt: 'Og Image Alt',
@@ -140,7 +141,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
         }}
         />
         <Head>
-          <meta name="twitter:image" content={bannerImage} />
+          <meta name="twitter:image" content={collection?.banner} />
         </Head>
         <Hero collectionId={id} fallback={fallback} />
         <Tabs.Root
