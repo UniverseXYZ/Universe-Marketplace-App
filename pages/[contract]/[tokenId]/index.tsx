@@ -20,6 +20,7 @@ import {
   useUserTokens,
 } from '../../../reservoir-kit-ui/src'
 import { useAccount } from 'wagmi'
+import { NextSeo } from 'next-seo';
 
 // Environment variables
 // For more information about these variables
@@ -140,7 +141,7 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
   // META
   const title = META_TITLE
     ? metadata.title(`${tokenName} - ${META_TITLE}`)
-    : metadata.title(`${tokenName} - 
+    : metadata.title(`${tokenName} -
     ${token?.token?.collection?.name}`)
 
   const description = META_DESCRIPTION
@@ -165,11 +166,30 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
 
   return (
     <Layout navbar={{}}>
-      <Head>
+      <NextSeo
+        title={collection?.name}
+        description={collection?.description}
+        openGraph={{
+          title: collection?.name,
+          description: collection?.description,
+          images: [
+            {
+              url: token?.token?.image || META_OG_IMAGE || '',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+            },
+          ],
+        }}
+        />
+        <Head>
+          <meta name="twitter:image" content={token?.token?.image || META_OG_IMAGE || ''} />
+        </Head>
+      {/* <Head>
         {title}
         {description}
         {image}
-      </Head>
+      </Head> */}
       <div className="col-span-full content-start space-y-4 px-2 pt-4 md:col-span-4 lg:col-span-5 lg:col-start-2 lg:px-0 2xl:col-span-4 2xl:col-start-3 3xl:col-start-5 4xl:col-start-7">
         <div className="mb-4">
           <TokenMedia token={token.token} />
