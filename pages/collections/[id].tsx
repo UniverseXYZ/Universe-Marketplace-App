@@ -127,19 +127,16 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
         title={collection?.name}
         description={collection?.description}
         openGraph={{
-          url: META_URL,
           title: collection?.name,
           description: collection?.description,
           images: [
             {
               url: bannerImage,
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
             },
           ],
-          siteName: 'Universe.xyz Marketplace',
-        }}
-        twitter={{
-          handle: '@universe_xyz',
-          cardType: 'summary_large_image',
         }}
         />
         <Head>

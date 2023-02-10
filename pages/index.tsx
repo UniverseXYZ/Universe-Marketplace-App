@@ -78,11 +78,11 @@ const Home: NextPage<Props> = ({ fallback }) => {
 
   return (
     <Layout navbar={{}}>
-      <Head>
+      {/* <Head>
         {title}
         {description}
         {image}
-      </Head>
+      </Head> */}
       <header className="col-span-full mb-12 mt-[66px] px-4 md:mt-40 lg:px-0">
         <h1 className="reservoir-h1 text-center dark:text-white">{tagline}</h1>
       </header>
