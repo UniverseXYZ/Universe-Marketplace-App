@@ -33,7 +33,7 @@ const MyDocument = function () {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="keywords" content="nft, ethereum, protocol" />
       <link rel="shortcut icon" type="image/svg" href={FAVICON} />
-      <DefaultSeo
+      {/* <DefaultSeo
           title={META_TITLE}
           description={META_DESCRIPTION}
           openGraph={{
@@ -56,7 +56,7 @@ const MyDocument = function () {
             handle: '@universe_xyz',
             cardType: 'summary_large_image',
           }}
-        />
+        /> */}
       {/* Reservoir Meta Tags */}
       {SOURCE_NAME ? (
         <meta property="reservoir:title" content={SOURCE_NAME} />
