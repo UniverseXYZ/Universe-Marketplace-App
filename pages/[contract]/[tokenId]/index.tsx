@@ -20,6 +20,7 @@ import {
   useUserTokens,
 } from '../../../reservoir-kit-ui/src'
 import { useAccount } from 'wagmi'
+import { NextSeo } from 'next-seo';
 
 // Environment variables
 // For more information about these variables
@@ -135,26 +136,6 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
     return <div>There was an error</div>
   }
 
-  const tokenName = `${token?.token?.name || `#${token?.token?.tokenId}`}`
-
-  // META
-  const title = META_TITLE
-    ? metadata.title(`${tokenName} - ${META_TITLE}`)
-    : metadata.title(`${tokenName} - 
-    ${token?.token?.collection?.name}`)
-
-  const description = META_DESCRIPTION
-    ? metadata.description(META_DESCRIPTION)
-    : token?.token?.description
-    ? metadata.description(token?.token?.description)
-    : null
-
-  const image = META_OG_IMAGE
-    ? metadata.image(META_OG_IMAGE)
-    : token?.token?.image
-    ? metadata.image(token?.token?.image)
-    : null
-
   const isOwner =
     userTokens &&
     userTokens[0] &&
@@ -165,11 +146,22 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
 
   return (
     <Layout navbar={{}}>
-      <Head>
-        {title}
-        {description}
-        {image}
-      </Head>
+      <NextSeo
+        title={token?.token?.name}
+        description={token?.token?.description}
+        openGraph={{
+          title: token?.token?.name,
+          description: token?.token?.description,
+          images: [
+            {
+              url: token?.token?.image || META_OG_IMAGE || '',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+            },
+          ],
+        }}
+        />
       <div className="col-span-full content-start space-y-4 px-2 pt-4 md:col-span-4 lg:col-span-5 lg:col-start-2 lg:px-0 2xl:col-span-4 2xl:col-start-3 3xl:col-start-5 4xl:col-start-7">
         <div className="mb-4">
           <TokenMedia token={token.token} />

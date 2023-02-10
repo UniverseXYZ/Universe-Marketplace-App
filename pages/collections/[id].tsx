@@ -26,6 +26,7 @@ import CollectionActivityTab from 'components/tables/CollectionActivityTab'
 import RefreshButton from 'components/RefreshButton'
 import SortTokens from 'components/SortTokens'
 import MobileTokensFilter from 'components/filter/MobileTokensFilter'
+import { NextSeo } from 'next-seo';
 
 // Environment variables
 // For more information about these variables
@@ -37,14 +38,7 @@ const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 // OPTIONAL
 const RESERVOIR_API_KEY = process.env.NEXT_PUBLIC_RESERVOIR_API_KEY
 
-const envBannerImage = process.env.NEXT_PUBLIC_BANNER_IMAGE
-
 const RESERVOIR_API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
-const PROXY_API_BASE = process.env.NEXT_PUBLIC_PROXY_API_BASE
-
-const metaTitle = process.env.NEXT_PUBLIC_META_TITLE
-const metaDescription = process.env.NEXT_PUBLIC_META_DESCRIPTION
-const metaImage = process.env.NEXT_PUBLIC_META_OG_IMAGE
 
 const COLLECTION = process.env.NEXT_PUBLIC_COLLECTION
 const COMMUNITY = process.env.NEXT_PUBLIC_COMMUNITY
@@ -88,31 +82,6 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
 
   const tokenCount = stats?.data?.stats?.tokenCount ?? 0
 
-  const title = metaTitle ? (
-    <title>{metaTitle}</title>
-  ) : (
-    <title>{collection?.name}</title>
-  )
-  const description = metaDescription ? (
-    <meta name="description" content={metaDescription} />
-  ) : (
-    <meta name="description" content={collection?.description as string} />
-  )
-
-  const bannerImage = (envBannerImage || collection?.banner) as string
-
-  const image = metaImage ? (
-    <>
-      <meta name="twitter:image" content={metaImage} />
-      <meta name="og:image" content={metaImage} />
-    </>
-  ) : (
-    <>
-      <meta name="twitter:image" content={bannerImage} />
-      <meta property="og:image" content={bannerImage} />
-    </>
-  )
-
   const tabs = [
     { name: 'Items', id: 'items' },
     { name: 'Activity', id: 'activity' },
@@ -121,11 +90,22 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
   return (
     <Layout navbar={{}}>
       <>
-        <Head>
-          {title}
-          {description}
-          {image}
-        </Head>
+        <NextSeo
+          title={fallback?.collection?.collections && fallback.collection.collections[0].name}
+          description={fallback?.collection?.collections && fallback.collection.collections[0].description}
+          openGraph={{
+            title: fallback?.collection?.collections && fallback.collection.collections[0].name,
+            description: fallback?.collection?.collections && fallback.collection.collections[0].description,
+            images: [
+              {
+                url: fallback?.collection?.collections && fallback.collection.collections[0].banner || 'no image found',
+                width: 800,
+                height: 600,
+                alt: 'Og Image Alt',
+              },
+            ],
+          }}
+        />
         <Hero collectionId={id} fallback={fallback} />
         <Tabs.Root
           value={router.query?.tab?.toString() || 'items'}
