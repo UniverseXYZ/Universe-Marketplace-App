@@ -38,15 +38,7 @@ const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 // OPTIONAL
 const RESERVOIR_API_KEY = process.env.NEXT_PUBLIC_RESERVOIR_API_KEY
 
-const envBannerImage = process.env.NEXT_PUBLIC_BANNER_IMAGE
-
 const RESERVOIR_API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
-const PROXY_API_BASE = process.env.NEXT_PUBLIC_PROXY_API_BASE
-
-const metaTitle = process.env.NEXT_PUBLIC_META_TITLE
-const metaDescription = process.env.NEXT_PUBLIC_META_DESCRIPTION
-const metaImage = process.env.NEXT_PUBLIC_META_OG_IMAGE
-const META_URL = process.env.NEXT_PUBLIC_META_URL
 
 const COLLECTION = process.env.NEXT_PUBLIC_COLLECTION
 const COMMUNITY = process.env.NEXT_PUBLIC_COMMUNITY
@@ -90,59 +82,36 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
 
   const tokenCount = stats?.data?.stats?.tokenCount ?? 0
 
-  const title = metaTitle ? (
-    <title>{metaTitle}</title>
-  ) : (
-    <title>{collection?.name}</title>
-  )
-  const description = metaDescription ? (
-    <meta name="description" content={metaDescription} />
-  ) : (
-    <meta name="description" content={collection?.description as string} />
-  )
-
-  const bannerImage = (envBannerImage || collection?.banner) as string
-
-  const image = metaImage ? (
-    <>
-      <meta name="twitter:image" content={metaImage} />
-      <meta name="og:image" content={metaImage} />
-    </>
-  ) : (
-    <>
-      <meta name="twitter:image" content={bannerImage} />
-      <meta property="og:image" content={bannerImage} />
-    </>
-  )
-
   const tabs = [
     { name: 'Items', id: 'items' },
     { name: 'Activity', id: 'activity' },
   ]
 
-  console.log(collection?.banner);
+  const meta = () => {
+    return (
+      <NextSeo
+      title={collection?.name}
+      description={collection?.description}
+      openGraph={{
+        title: collection?.name,
+        description: collection?.description,
+        images: [
+          {
+            url: collection?.banner || 'no image found',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+          },
+        ],
+      }}
+    />
+    )
+  }
+
   return (
     <Layout navbar={{}}>
       <>
-        <NextSeo
-        title={collection?.name}
-        description={collection?.description}
-        openGraph={{
-          title: collection?.name,
-          description: collection?.description,
-          images: [
-            {
-              url: collection?.banner || 'missing image',
-              width: 800,
-              height: 600,
-              alt: 'Og Image Alt',
-            },
-          ],
-        }}
-        />
-        <Head>
-          <meta name="twitter:image" content={collection?.banner} />
-        </Head>
+        {meta()}
         <Hero collectionId={id} fallback={fallback} />
         <Tabs.Root
           value={router.query?.tab?.toString() || 'items'}
