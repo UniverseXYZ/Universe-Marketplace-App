@@ -124,15 +124,15 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
     <Layout navbar={{}}>
       <>
         <NextSeo
-        title={metaTitle || collection?.name}
-        description={metaDescription || collection?.description}
+        title={collection?.name}
+        description={collection?.description}
         openGraph={{
           url: META_URL,
-          title: metaTitle || collection?.name,
-          description: metaDescription || collection?.description,
+          title: collection?.name,
+          description: collection?.description,
           images: [
             {
-              url: metaImage || bannerImage,
+              url: bannerImage,
             },
           ],
           siteName: 'Universe.xyz Marketplace',
