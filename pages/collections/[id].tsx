@@ -87,31 +87,25 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
     { name: 'Activity', id: 'activity' },
   ]
 
-  const meta = () => {
-    return (
-      <NextSeo
-      title={collection?.name}
-      description={collection?.description}
-      openGraph={{
-        title: collection?.name,
-        description: collection?.description,
-        images: [
-          {
-            url: fallback.collection.collections && fallback.collection.collections[0].banner || 'no image found',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-          },
-        ],
-      }}
-    />
-    )
-  }
-
   return (
     <Layout navbar={{}}>
       <>
-        {meta()}
+        <NextSeo
+          title={fallback?.collection?.collections && fallback.collection.collections[0].name}
+          description={fallback?.collection?.collections && fallback.collection.collections[0].description}
+          openGraph={{
+            title: fallback?.collection?.collections && fallback.collection.collections[0].name,
+            description: fallback?.collection?.collections && fallback.collection.collections[0].description,
+            images: [
+              {
+                url: fallback?.collection?.collections && fallback.collection.collections[0].banner || 'no image found',
+                width: 800,
+                height: 600,
+                alt: 'Og Image Alt',
+              },
+            ],
+          }}
+        />
         <Hero collectionId={id} fallback={fallback} />
         <Tabs.Root
           value={router.query?.tab?.toString() || 'items'}
