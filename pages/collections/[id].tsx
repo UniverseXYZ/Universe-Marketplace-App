@@ -142,6 +142,9 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           cardType: 'summary_large_image',
         }}
         />
+        <Head>
+          <meta name="twitter:image" content={bannerImage || metaImage} />
+        </Head>
         {/* <Head>
           {title}
           {description}
