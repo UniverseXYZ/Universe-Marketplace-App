@@ -136,26 +136,6 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
     return <div>There was an error</div>
   }
 
-  const tokenName = `${token?.token?.name || `#${token?.token?.tokenId}`}`
-
-  // META
-  const title = META_TITLE
-    ? metadata.title(`${tokenName} - ${META_TITLE}`)
-    : metadata.title(`${tokenName} -
-    ${token?.token?.collection?.name}`)
-
-  const description = META_DESCRIPTION
-    ? metadata.description(META_DESCRIPTION)
-    : token?.token?.description
-    ? metadata.description(token?.token?.description)
-    : null
-
-  const image = META_OG_IMAGE
-    ? metadata.image(META_OG_IMAGE)
-    : token?.token?.image
-    ? metadata.image(token?.token?.image)
-    : null
-
   const isOwner =
     userTokens &&
     userTokens[0] &&
@@ -167,11 +147,11 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
   return (
     <Layout navbar={{}}>
       <NextSeo
-        title={collection?.name}
-        description={collection?.description}
+        title={token?.token?.name}
+        description={token?.token?.description}
         openGraph={{
-          title: collection?.name,
-          description: collection?.description,
+          title: token?.token?.name,
+          description: token?.token?.description,
           images: [
             {
               url: token?.token?.image || META_OG_IMAGE || '',
