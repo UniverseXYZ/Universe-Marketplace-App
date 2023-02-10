@@ -10,6 +10,7 @@ import CartMenu from './CartMenu'
 import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
 import useMounted from 'hooks/useMounted'
+import Link from 'next/link'
 
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
@@ -126,13 +127,13 @@ const Navbar: FC = () => {
       {showLinks && (
         <div className="z-10 ml-12 mr-12 hidden items-center gap-11 md:flex">
           {externalLinks.map(({ name, url }) => (
-            <a
+            <Link
               key={url}
               href={url}
               className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white"
             >
               {name}
-            </a>
+            </Link>
           ))}
         </div>
       )}
