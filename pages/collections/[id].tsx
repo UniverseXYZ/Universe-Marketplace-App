@@ -140,13 +140,8 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
         }}
         />
         <Head>
-          <meta name="twitter:image" content={bannerImage || metaImage} />
+          <meta name="twitter:image" content={bannerImage} />
         </Head>
-        {/* <Head>
-          {title}
-          {description}
-          {image}
-        </Head> */}
         <Hero collectionId={id} fallback={fallback} />
         <Tabs.Root
           value={router.query?.tab?.toString() || 'items'}

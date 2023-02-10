@@ -33,30 +33,6 @@ const MyDocument = function () {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="keywords" content="nft, ethereum, protocol" />
       <link rel="shortcut icon" type="image/svg" href={FAVICON} />
-      {/* <DefaultSeo
-          title={META_TITLE}
-          description={META_DESCRIPTION}
-          openGraph={{
-            type: 'website',
-            locale: 'en_IE',
-            url: META_URL,
-            siteName: META_TITLE,
-            title: META_TITLE,
-            description: META_DESCRIPTION,
-            images: [
-              {
-                url: OG_IMAGE || '',
-                width: 800,
-                height: 600,
-                alt: 'Og Image Alt',
-              },
-            ]
-          }}
-          twitter={{
-            handle: '@universe_xyz',
-            cardType: 'summary_large_image',
-          }}
-        /> */}
       {/* Reservoir Meta Tags */}
       {SOURCE_NAME ? (
         <meta property="reservoir:title" content={SOURCE_NAME} />
