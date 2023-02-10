@@ -97,7 +97,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
         description: collection?.description,
         images: [
           {
-            url: collection?.banner || 'no image found',
+            url: fallback.collection.collections && fallback.collection.collections[0].banner || 'no image found',
             width: 800,
             height: 600,
             alt: 'Og Image Alt',
