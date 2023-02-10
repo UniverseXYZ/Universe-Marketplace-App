@@ -42,6 +42,8 @@ import {
 } from '@rainbow-me/rainbowkit'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
+import { DefaultSeo } from 'next-seo';
+
 
 // Select a custom ether.js interface for connecting to a network
 // Reference = https://wagmi-xyz.vercel.app/docs/provider#provider-optional
@@ -70,6 +72,12 @@ const API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
 const SOURCE_NAME = process.env.NEXT_PUBLIC_SOURCE_NAME
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 const MARKETPLACE_FEE = process.env.NEXT_PUBLIC_MARKETPLACE_FEE
+
+// META
+const META_TITLE = process.env.NEXT_PUBLIC_META_TITLE
+const META_DESCRIPTION = process.env.NEXT_PUBLIC_META_DESCRIPTION
+const OG_IMAGE = process.env.NEXT_PUBLIC_META_OG_IMAGE
+const META_URL = process.env.NEXT_PUBLIC_META_URL
 
 const envChain = Object.values(allChains).find(
   (chain) => chain.id === +(CHAIN_ID || allChains.mainnet)
@@ -184,6 +192,30 @@ const App: FC<AppProps & { baseUrl: string }> = ({
   return (
     <ReservoirKitProvider options={options} theme={reservoirKitTheme}>
       <RecoilRoot>
+        <DefaultSeo
+            title={META_TITLE}
+            description={META_DESCRIPTION}
+            openGraph={{
+              type: 'website',
+              locale: 'en_IE',
+              url: META_URL,
+              siteName: META_TITLE,
+              title: META_TITLE,
+              description: META_DESCRIPTION,
+              images: [
+                {
+                  url: OG_IMAGE || '',
+                  width: 800,
+                  height: 600,
+                  alt: 'Og Image Alt',
+                },
+              ]
+            }}
+            twitter={{
+              handle: '@universe_xyz',
+              cardType: 'summary_large_image',
+            }}
+          />
         <WagmiConfig client={wagmiClient}>
           <RainbowKitProvider
             chains={chains}
