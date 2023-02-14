@@ -1,6 +1,7 @@
 import { FC, ReactElement, useEffect, useState } from 'react'
 import ConnectWallet from './ConnectWallet'
 import ProductsDropdown from './ProductsDropdown'
+import NFTDropsDropdown from './NFTDropsDropdown'
 import HamburgerMenu from './HamburgerMenu'
 import dynamic from 'next/dynamic'
 import { paths } from '@reservoir0x/reservoir-sdk'
@@ -157,6 +158,7 @@ const Navbar: FC = () => {
             </div>
           )}
           <ProductsDropdown />
+          <NFTDropsDropdown />
           <CartMenu />
           <ConnectWallet />
           <ThemeSwitcher />

@@ -4,13 +4,14 @@ import Jazzicon, { jsNumberForAddress } from 'react-jazzicon'
 type Props = {
   address: string | undefined
   avatar?: string | null | undefined
-  size?: number
+  size?: number,
+  className?: string
 }
 
-const Avatar: FC<Props> = ({ address, avatar, size = 24 }) => {
+const Avatar: FC<Props> = ({ address, avatar, size = 24, className }) => {
   return avatar ? (
     <div
-      className="overflow-hidden rounded-full"
+      className={`overflow-hidden rounded-full ${className}`}
       style={{
         height: size,
         width: size,
