@@ -16,7 +16,7 @@ const NFTDropsDropdown: FC = () => {
 
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger className="flex items-center">
+      <DropdownMenu.Trigger className="flex items-center focus-visible:outline-none">
         NFT Drops <BiChevronDown />
       </DropdownMenu.Trigger>
 

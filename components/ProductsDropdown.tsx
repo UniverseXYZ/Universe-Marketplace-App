@@ -16,7 +16,7 @@ const ProductsDropdown: FC = () => {
 
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger className="flex items-center">
+      <DropdownMenu.Trigger className="flex items-center focus-visible:outline-none">
         Products <BiChevronDown />
       </DropdownMenu.Trigger>
 
