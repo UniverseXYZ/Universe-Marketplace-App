@@ -71,3 +71,7 @@ model-viewer {
 .markdown-support a {
   text-decoration: underline;
 }
+
+.tr-hover:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
