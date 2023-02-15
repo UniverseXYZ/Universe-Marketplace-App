@@ -140,14 +140,14 @@ const CartMenu: FC = () => {
         <div className="mb-4 flex justify-between">
           <div className="flex items-center">
             <div className="reservoir-h6 mr-3">My Cart</div>
-            <div className="reservoir-subtitle flex h-5 w-5 items-center justify-center rounded-full bg-primary-700 text-white">
+            <div className="reservoir-subtitle flex h-5 w-5 items-center justify-center rounded-md bg-black text-white">
               {cartCount}
             </div>
           </div>
           {cartCount > 0 && (
             <button
               onClick={() => setCartTokens([])}
-              className="text-primary-700 dark:text-white"
+              className="text-black dark:text-white font-semibold"
             >
               Clear
             </button>
@@ -225,7 +225,7 @@ const CartMenu: FC = () => {
             waitingTx ||
             Boolean(balance?.formatted && +balance.formatted < cartTotal)
           }
-          className="btn-primary-fill w-full"
+          className="btn-primary-fill w-full bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] text-black font-medium"
         >
           {waitingTx ? 'Waiting' : 'Purchase'}
         </button>
