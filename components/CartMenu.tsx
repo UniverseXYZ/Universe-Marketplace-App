@@ -225,7 +225,7 @@ const CartMenu: FC = () => {
             waitingTx ||
             Boolean(balance?.formatted && +balance.formatted < cartTotal)
           }
-          className="btn-primary-fill w-full bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] text-black font-medium"
+          className="btn-primary-fill w-full bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] text-black font-medium disabled:text-black"
         >
           {waitingTx ? 'Waiting' : 'Purchase'}
         </button>
