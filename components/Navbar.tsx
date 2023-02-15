@@ -14,6 +14,9 @@ import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
 import useMounted from 'hooks/useMounted'
 import Link from 'next/link'
+import {
+  useAccount,
+} from 'wagmi'
 
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
@@ -40,6 +43,7 @@ function getInitialSearchHref() {
 
 const Navbar: FC = () => {
   const isMounted = useMounted()
+  const account = useAccount()
   const [showLinks, setShowLinks] = useState(true)
   const [filterComponent, setFilterComponent] = useState<ReactElement | null>(
     null
@@ -150,9 +154,9 @@ const Navbar: FC = () => {
           <MoreDropdown />
           <CartMenu />
           {/* Sell */}
-          <div className='items-center md:flex bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] px-[16px] py-[11px] rounded-lg cursor-pointer'>
+          <div className={`items-center md:flex ${account.isConnected ? 'bg-gradient-to-r from-[#BCEB00] to-[#00EAEA]' : 'bh-white border-[1px]'}  rounded-lg cursor-pointer`}>
             <Link href={`/sell`} legacyBehavior={true}>
-              <p className='text-[16px] leading-[20px] font-medium'>Sell</p>
+              <p className='text-[16px] leading-[20px] font-medium px-[16px] py-[11px]'>Sell</p>
             </Link>
           </div>
           <ConnectWallet />
