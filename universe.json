@@ -2,7 +2,7 @@
   "marketplaces": [
     {
       "name": "Universe.XYZ",
-      "imageUrl": "https://www.universe.xyz/favicon.ico",
+      "imageUrl": "https://universe-marketplace-app-dev.vercel.app/universe.svg",
       "fee": { "percent": 0.3, "bps": 30 },
       "feeBps": 0.003,
       "orderbook": "universe",
