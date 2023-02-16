@@ -26,7 +26,6 @@ const HeroBackground: FC<Props> = ({ banner, children }) => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${bannerImage})`,
-            filter: 'blur(5px)',
           }}
         />
       </div>

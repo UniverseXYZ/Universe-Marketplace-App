@@ -147,10 +147,10 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
   return (
     <Layout navbar={{}}>
       <NextSeo
-        title={token?.token?.name}
+        title={`${token?.token?.name || token.token?.tokenId} | UniverseXYZ`}
         description={token?.token?.description}
         openGraph={{
-          title: token?.token?.name,
+          title: `${token?.token?.name || token.token?.tokenId} | UniverseXYZ`,
           description: token?.token?.description,
           images: [
             {
