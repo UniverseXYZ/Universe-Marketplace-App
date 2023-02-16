@@ -124,13 +124,13 @@ const CartMenu: FC = () => {
   return (
     <Popover.Root>
       <Popover.Trigger>
-        <div className="relative z-10 grid h-8 w-8 items-center justify-center rounded-lg border-[1px] p-[12px] w-[42px] h-[42px]">
+        <div className="relative z-10 grid h-8 w-8 items-center justify-center rounded-lg border-[1px] p-[12px] w-[44px] h-[42px]">
           {cartCount > 0 && (
             <div className="reservoir-subtitle absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-md bg-black text-white">
               {cartCount}
             </div>
           )}
-          <FiShoppingCart className="h-[20px] w-[20px]" />
+          <FiShoppingCart className="h-[18px] w-[18px]" />
         </div>
       </Popover.Trigger>
       <StyledContent
