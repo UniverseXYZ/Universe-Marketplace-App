@@ -569,7 +569,7 @@ export function BidModal({
                           Convert Manually
                         </Button>
                         <Button
-                          css={{ flex: 1, maxHeight: 44 }}
+                          css={{ flex: 1, maxHeight: 44, backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                           disabled={!hasEnoughNativeCurrency}
                           onClick={placeBid}
                         >
@@ -699,7 +699,7 @@ export function BidModal({
                   </Button>
                 ) : (
                   <Button
-                    css={{ width: '100%' }}
+                    css={{ width: '100%', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                     onClick={() => {
                       setOpen(false)
                       if (onClose) {
