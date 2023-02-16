@@ -75,3 +75,8 @@ model-viewer {
 .tr-hover:hover {
   background: rgba(0, 0, 0, 0.05);
 }
+
+/* Overwrite round class */
+.rounded-full {
+  border-radius: 8px !important;
+}

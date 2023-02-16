@@ -91,10 +91,10 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
     <Layout navbar={{}}>
       <>
         <NextSeo
-          title={fallback?.collection?.collections && fallback.collection.collections[0].name}
+          title={`${fallback?.collection?.collections && fallback.collection.collections[0].name} | UniverseXYZ`}
           description={fallback?.collection?.collections && fallback.collection.collections[0].description}
           openGraph={{
-            title: fallback?.collection?.collections && fallback.collection.collections[0].name,
+            title: `${fallback?.collection?.collections && fallback.collection.collections[0].name} | UniverseXYZ`,
             description: fallback?.collection?.collections && fallback.collection.collections[0].description,
             images: [
               {
