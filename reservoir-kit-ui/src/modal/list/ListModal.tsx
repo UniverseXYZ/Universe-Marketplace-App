@@ -408,7 +408,7 @@ export function ListModal({
                     )}
                     <Button
                       onClick={() => setListStep(ListStep.SetPrice)}
-                      css={{ width: '100%' }}
+                      css={{ width: '100%', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px'}}
                     >
                       Set your price
                     </Button>
@@ -569,7 +569,7 @@ export function ListModal({
                           marketplace.price === '' || marketplace.price == 0
                       )}
                       onClick={listToken}
-                      css={{ width: '100%' }}
+                      css={{ width: '100%', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                     >
                       List for sale
                     </Button>
@@ -643,7 +643,7 @@ export function ListModal({
                       >
                         Edit Listing
                       </Button>
-                      <Button css={{ flex: 1 }} onClick={() => listToken()}>
+                      <Button css={{ flex: 1, backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }} onClick={() => listToken()}>
                         Retry
                       </Button>
                     </Flex>

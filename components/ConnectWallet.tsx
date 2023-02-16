@@ -37,7 +37,7 @@ const ConnectWallet: FC = () => {
   if (!account.isConnected)
     return (
       <ConnectWalletButton>
-        <img src="/icons/wallet.svg" alt="Wallet Icon" />
+        <img src="/icons/main-nav/wallet.svg" alt="Wallet Icon" />
       </ConnectWalletButton>
     )
 

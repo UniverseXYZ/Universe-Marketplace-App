@@ -11,6 +11,7 @@ type Props = {
   title?: string
   side?: 'left' | 'right'
   hideIcon?: boolean
+  avatarSize?: number
 }
 
 const EthAccount: FC<Props> = ({
@@ -19,8 +20,9 @@ const EthAccount: FC<Props> = ({
   title,
   side = 'right',
   hideIcon,
+  avatarSize
 }) => {
-  const icon = !hideIcon && <Avatar address={address} avatar={ens?.avatar} />
+  const icon = !hideIcon && <Avatar size={avatarSize} address={address} avatar={ens?.avatar} />
 
   return (
     <div className="flex items-center gap-2">

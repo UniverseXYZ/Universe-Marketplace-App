@@ -205,7 +205,7 @@ const TokenCard: FC<Props> = ({
           <div className="grid">
             <ListModal
               trigger={
-                <button className="btn-primary-fill reservoir-subtitle flex h-[40px] items-center justify-center whitespace-nowrap rounded-none text-white focus:ring-0">
+                <button className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none text-black reservoir-subtitle flex h-[40px] items-center justify-center whitespace-nowrap rounded-none text-white focus:ring-0">
                   {price?.amount?.decimal
                     ? 'Create New Listing'
                     : 'List for Sale'}
@@ -250,7 +250,7 @@ const TokenCard: FC<Props> = ({
                 mutate={mutate}
                 signer={signer}
                 isInTheWrongNetwork={isInTheWrongNetwork}
-                buttonClassName="btn-primary-fill reservoir-subtitle flex h-[40px] items-center justify-center whitespace-nowrap rounded-none text-white focus:ring-0"
+                buttonClassName="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none text-black reservoir-subtitle flex h-[40px] items-center justify-center whitespace-nowrap rounded-none text-white focus:ring-0"
               />
               {isInCart && (
                 <button

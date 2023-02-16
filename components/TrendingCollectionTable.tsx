@@ -103,7 +103,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                     (FOOTER_ENABLED && !expanded && index == 9)
                       ? ''
                       : 'border-b'
-                  } group h-[88px] border-neutral-300 dark:border-neutral-600 dark:text-white cursor-pointer`}
+                  } group h-[88px] border-neutral-300 dark:border-neutral-600 dark:text-white cursor-pointer tr-hover`}
                 >
                   {/* COLLECTION */}
                   <td className="reservoir-body flex items-center gap-4 whitespace-nowrap px-6 py-4 dark:text-white">
@@ -114,6 +114,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                         <img
                           src={optimizeImage(image, 140)}
                           className="h-[56px] w-[56px] rounded-full object-cover"
+                          alt='Universe Collection'
                         />
                         <div
                           className={`reservoir-h6 overflow-hidden truncate whitespace-nowrap dark:text-white ${
@@ -182,7 +183,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
 
       {FOOTER_ENABLED && !expanded && (
         <button
-          className="btn-primary-outline mx-auto my-3 border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
+          className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none mx-auto my-3 border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
           onClick={() => {
             setExpanded(true)
           }}
