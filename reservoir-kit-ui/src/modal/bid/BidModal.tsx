@@ -573,7 +573,7 @@ export function BidModal({
                           disabled={!hasEnoughNativeCurrency}
                           onClick={placeBid}
                         >
-                          <Text style="h6" color="button" ellipsify>
+                          <Text style="h6" color="base" ellipsify>
                             Convert {amountToWrap} {balance?.symbol || 'ETH'}{' '}
                             for me
                           </Text>
