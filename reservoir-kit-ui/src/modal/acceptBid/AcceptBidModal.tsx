@@ -253,6 +253,7 @@ export function AcceptBidModal({
                   }}
                   color="primary"
                   onClick={acceptBid}
+                  css={{ backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px'}}
                 >
                   Accept
                 </Button>
