@@ -304,7 +304,7 @@ export function BuyModal({
                   {hasEnoughCurrency ? (
                     <Button
                       onClick={buyToken}
-                      css={{ width: '100%' }}
+                      css={{ width: '100%', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                       color="primary"
                     >
                       Checkout
@@ -328,7 +328,7 @@ export function BuyModal({
                         onClick={() => {
                           setBuyStep(BuyStep.AddFunds)
                         }}
-                        css={{ width: '100%' }}
+                        css={{ width: '100%', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                       >
                         Add Funds
                       </Button>
@@ -588,7 +588,7 @@ export function BuyModal({
                   </Box>
                 </Flex>
                 <Button
-                  css={{ m: '$4' }}
+                  css={{ m: '$4', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                   color="primary"
                   onClick={() => copyToClipboard(address as string)}
                 >

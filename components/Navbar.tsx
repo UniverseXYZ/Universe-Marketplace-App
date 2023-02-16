@@ -1,5 +1,8 @@
 import { FC, ReactElement, useEffect, useState } from 'react'
 import ConnectWallet from './ConnectWallet'
+import ProductsDropdown from './ProductsDropdown'
+import NFTDropsDropdown from './NFTDropsDropdown'
+import MoreDropdown from './MoreDropdown'
 import HamburgerMenu from './HamburgerMenu'
 import dynamic from 'next/dynamic'
 import { paths } from '@reservoir0x/reservoir-sdk'
@@ -11,6 +14,9 @@ import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
 import useMounted from 'hooks/useMounted'
 import Link from 'next/link'
+import {
+  useAccount,
+} from 'wagmi'
 
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
@@ -37,6 +43,7 @@ function getInitialSearchHref() {
 
 const Navbar: FC = () => {
   const isMounted = useMounted()
+  const account = useAccount()
   const [showLinks, setShowLinks] = useState(true)
   const [filterComponent, setFilterComponent] = useState<ReactElement | null>(
     null
@@ -123,20 +130,7 @@ const Navbar: FC = () => {
 
   return (
     <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-white px-6 py-4 dark:border-neutral-600 dark:bg-black md:gap-3 md:py-6 md:px-16">
-      <NavbarLogo className="z-10 max-w-[300px]" />
-      {showLinks && (
-        <div className="z-10 ml-12 mr-12 hidden items-center gap-11 md:flex">
-          {externalLinks.map(({ name, url }) => (
-            <Link
-              key={url}
-              href={url}
-              className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white"
-            >
-              {name}
-            </Link>
-          ))}
-        </div>
-      )}
+      <NavbarLogo className="z-10 max-w-[300px] mr-6" />
       {(hasCommunityDropdown || showDesktopSearch) && (
         <div className="flex h-full w-full items-center">
           {filterComponent && filterComponent}
@@ -155,7 +149,16 @@ const Navbar: FC = () => {
               {filterComponent && filterComponent}
             </div>
           )}
+          <ProductsDropdown />
+          <NFTDropsDropdown />
+          <MoreDropdown />
           <CartMenu />
+          {/* Sell */}
+          <div className={`items-center md:flex ${account.isConnected ? 'bg-gradient-to-r from-[#BCEB00] to-[#00EAEA]' : 'bh-white border-[1px]'}  rounded-lg cursor-pointer`}>
+            <Link href={`/sell`} legacyBehavior={true}>
+              <p className='text-[16px] leading-[20px] font-medium px-[16px] py-[11px]'>Sell</p>
+            </Link>
+          </div>
           <ConnectWallet />
           <ThemeSwitcher />
         </div>

@@ -238,14 +238,14 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
   if (!signer) {
     return (
       <button
-        className="btn-primary-fill gap-2 dark:ring-primary-900 dark:focus:ring-4"
+        className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none gap-2 dark:ring-primary-900 dark:focus:ring-4"
         onClick={() => {
           if (openConnectModal) {
             openConnectModal()
           }
         }}
       >
-        <FaBroom className="text-white" />
+        <FaBroom className="text-black" />
         Sweep
       </button>
     )
@@ -260,9 +260,9 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
           isInTheWrongNetwork ||
           sweepTokens?.length === 0
         }
-        className="btn-primary-fill gap-2 dark:ring-primary-900 dark:focus:ring-4"
+        className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none gap-2 text-black dark:ring-primary-900 dark:focus:ring-4"
       >
-        <FaBroom className="text-white" />
+        <FaBroom className="text-black" />
         Sweep
       </Dialog.Trigger>
 
@@ -393,7 +393,7 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
 
                         await execute(signer)
                       }}
-                      className="btn-primary-fill w-full dark:ring-primary-900 dark:focus:ring-4 md:mx-auto md:w-[248px]"
+                      className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none text-black w-full dark:ring-primary-900 dark:focus:ring-4 md:mx-auto md:w-[248px]"
                     >
                       Buy Now
                     </button>

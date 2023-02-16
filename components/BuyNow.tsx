@@ -22,7 +22,7 @@ const BuyNow: FC<Props> = ({
   data,
   isInTheWrongNetwork,
   signer,
-  buttonClassName = 'btn-primary-fill w-full',
+  buttonClassName = 'btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none w-full',
   mutate,
 }) => {
   const { switchNetworkAsync } = useSwitchNetwork({
