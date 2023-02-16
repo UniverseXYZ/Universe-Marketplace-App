@@ -77,7 +77,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
           e.preventDefault()
         }}
       >
-      <div className='h-screen overflow-x-scroll pb-[100px]'>
+      <div className='h-screen overflow-x-scroll pb-[200px]'>
         <div className="flex items-center justify-between gap-3 border-b border-neutral-300 px-6 py-4 dark:border-neutral-600">
           <NavbarLogo variant="desktop" />
           <Dialog.Close className="btn-primary-outline py-1.5 px-[5px] dark:text-white">
