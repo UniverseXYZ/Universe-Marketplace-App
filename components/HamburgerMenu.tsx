@@ -77,6 +77,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
           e.preventDefault()
         }}
       >
+      <div className='h-screen overflow-x-scroll pb-[100px]'>
         <div className="flex items-center justify-between gap-3 border-b border-neutral-300 px-6 py-4 dark:border-neutral-600">
           <NavbarLogo variant="desktop" />
           <Dialog.Close className="btn-primary-outline py-1.5 px-[5px] dark:text-white">
@@ -432,7 +433,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
           {accountData.isConnected ?
             (
               <div className='mb-4 pt-4 border-t px-4'>
-                <div className={`items-center justify-center flex bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] rounded-lg cursor-pointer`}>
+                <div className={`items-center justify-center flex bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] rounded-lg cursor-pointer shadow-md`}>
                   <Link href={`/sell`} legacyBehavior={true}>
                     <p className='text-[16px] leading-[20px] font-medium px-[16px] py-[11px]'>Sell</p>
                   </Link>
@@ -440,16 +441,18 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
               </div>
 
             )
-             :
+            :
             (
               <div className="mb-4 pt-4 border-t px-4">
-                <ConnectWalletButton className="w-full">
+                <ConnectWalletButton className="w-full shadow-md">
                   <span>Connect Wallet</span>
                 </ConnectWalletButton>
               </div>
             )
           }
         </div>
+
+      </div>
       </Dialog.Content>
     </Dialog.Root>
   )
