@@ -35,6 +35,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
   const { data: ensAvatar } = useEnsAvatar()
   const wallet = connectors[0]
 
+  // @ts-ignore
   // eslint-disable-next-line react/display-name
   const AccordionTrigger = forwardRef(({ children, className, ...props }, forwardedRef) => {
     return (
@@ -42,6 +43,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
         <Accordion.Trigger
           className={`${className} flex items-center justify-between flex-1 py-[16px] data-[state=closed]:border-b`}
           {...props}
+          // @ts-ignore
           ref={forwardedRef}
         >
           {children}
@@ -50,11 +52,13 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
       </Accordion.Header>
     )
   });
+  // @ts-ignore
   // eslint-disable-next-line react/display-name
   const AccordionContent = forwardRef(({ children, className, ...props }, forwardedRef) => (
     <Accordion.Content
       className={`${className} px-[20px]`}
       {...props}
+      // @ts-ignore
       ref={forwardedRef}
     >
       <div className="AccordionContentText">{children}</div>
@@ -121,9 +125,11 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
         <Accordion.Root className="AccordionRoot" type="single" collapsible>
           {/* Products */}
           <Accordion.Item className="AccordionItem" value="item-1">
+          {/* @ts-ignore */}
             <AccordionTrigger>
               <p className='text-base font-semibold'>Products</p>
             </AccordionTrigger>
+            {/* @ts-ignore */}
             <AccordionContent>
                 {/* Marketplace */}
                 <Link href={`/`} legacyBehavior={true}>
@@ -184,9 +190,11 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
 
           {/* NFT Drops */}
           <Accordion.Item className="AccordionItem" value="item-2">
+            {/* @ts-ignore */}
             <AccordionTrigger>
               <p className='text-base font-semibold'>NFT Drops</p>
             </AccordionTrigger>
+            {/* @ts-ignore */}
             <AccordionContent>
               {/* Polymorphs */}
               <a href='https://polymorphs.universe.xyz/' target="_blank" rel="noreferrer">
@@ -246,9 +254,11 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
 
           {/* Info */}
           <Accordion.Item className="AccordionItem" value="item-3">
+            {/* @ts-ignore */}
             <AccordionTrigger>
               <p className='text-base font-semibold'>Info</p>
             </AccordionTrigger>
+            {/* @ts-ignore */}
             <AccordionContent>
               {/* About */}
               <a href='https://www.universe.xyz/about' target="_blank" rel="noreferrer">
@@ -324,9 +334,11 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
 
           {/* DAO */}
           <Accordion.Item className="AccordionItem" value="item-4">
+            {/* @ts-ignore */}
             <AccordionTrigger>
               <p className='text-base font-semibold'>DAO</p>
             </AccordionTrigger>
+            {/* @ts-ignore */}
             <AccordionContent>
               {/* Governance */}
               <a href='https://gov.universe.xyz/governance' target="_blank" rel="noreferrer">
