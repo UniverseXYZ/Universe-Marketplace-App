@@ -528,7 +528,7 @@ export function BidModal({
                   {bidAmount !== '' && hasEnoughWrappedCurrency && (
                     <Button
                       onClick={placeBid}
-                      css={{ width: '100%', mt: 'auto' }}
+                      css={{ width: '100%', mt: 'auto', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                     >
                       {token && token.token
                         ? 'Make an Offer'
@@ -665,7 +665,7 @@ export function BidModal({
                       >
                         Edit Bid
                       </Button>
-                      <Button css={{ flex: 1 }} onClick={placeBid}>
+                      <Button css={{ flex: 1, backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }} onClick={placeBid}>
                         Retry
                       </Button>
                     </Flex>
