@@ -124,7 +124,7 @@ const CartMenu: FC = () => {
   return (
     <Popover.Root>
       <Popover.Trigger>
-        <div className="relative z-10 grid h-8 w-8 items-center justify-center rounded-lg border-[1px] p-[12px] w-[44px] h-[42px] hover:bg-[#0000000d]">
+        <div className="relative z-10 grid h-8 w-8 items-center justify-center rounded-lg border-[1px] p-[11px] w-[42px] h-[42px] hover:bg-[#0000000d]">
           {cartCount > 0 && (
             <div className="reservoir-subtitle absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-md bg-black text-white">
               {cartCount}
@@ -134,8 +134,8 @@ const CartMenu: FC = () => {
             className="object-fit"
             src='/icons/main-nav/cart.svg'
             alt={'rarity'}
-            width='18px'
-            height='18px'
+            width='20px'
+            height='20px'
           />
         </div>
       </Popover.Trigger>

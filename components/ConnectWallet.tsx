@@ -54,14 +54,14 @@ const ConnectWallet: FC = () => {
         >
           {/* Balance and ENS */}
           <div className='border rounded-lg mb-[8px]'>
-            <div className="group flex w-full items-center justify-between rounded px-4 py-2 outline-none transition text-base font-semibold">
+            <div className="group flex w-full items-center justify-between rounded px-4 pt-4 pb-2 outline-none transition text-base font-semibold">
               {ensName ? (
                 <span>{truncateEns(ensName)}</span>
               ) : (
                 <span>{truncateAddress(account.address || '')}</span>
               )}
             </div>
-            <div className="group flex w-full items-center justify-between rounded px-4 py-2 outline-none transition text-sm font-semibold">
+            <div className="group flex w-full items-center justify-between rounded px-4 pt-2 pb-4 outline-none transition text-sm font-semibold">
               <span>
                 {account.address && <Balance address={account.address} />}
               </span>
