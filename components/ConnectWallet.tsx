@@ -62,9 +62,7 @@ const ConnectWallet: FC = () => {
               )}
             </div>
             <div className="group flex w-full items-center justify-between rounded px-4 pt-2 pb-4 outline-none transition text-sm font-semibold">
-              <span>
-                {account.address && <Balance address={account.address} />}
-              </span>
+              {account.address && <Balance address={account.address} />}
             </div>
           </div>
 
@@ -133,5 +131,5 @@ type Props = {
 
 export const Balance: FC<Props> = ({ address }) => {
   const { data: balance } = useBalance({ address: address as Address })
-  return <FormatNativeCrypto amount={balance?.value} />
+  return <FormatNativeCrypto amount={balance?.value} logoWidth={20}/>
 }
