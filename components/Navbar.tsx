@@ -154,7 +154,7 @@ const Navbar: FC = () => {
           <MoreDropdown />
           <CartMenu />
           {/* Sell */}
-          <div className={`items-center md:flex ${account.isConnected ? 'bg-gradient-to-r from-[#BCEB00] to-[#00EAEA]' : 'bh-white border-[1px]'}  rounded-lg cursor-pointer`}>
+          <div className={`items-center md:flex ${account.isConnected ? 'bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc]' : 'bh-white border-[1px]'}  rounded-lg cursor-pointer`}>
             <Link href={`/sell`} legacyBehavior={true}>
               <p className='text-[16px] leading-[20px] font-medium px-[16px] py-[11px]'>Sell</p>
             </Link>
