@@ -16,7 +16,7 @@ const ProductsDropdown: FC = () => {
 
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger style={{fontWeight: '500'}} className="flex items-center focus-visible:outline-none">
+      <DropdownMenu.Trigger style={{fontWeight: '500'}} className="flex items-center focus-visible:outline-none hover:text-[#666666]">
         Products <BiChevronDown />
       </DropdownMenu.Trigger>
 
@@ -24,12 +24,12 @@ const ProductsDropdown: FC = () => {
       <DropdownMenu.Content align="center" sideOffset={6}>
         <div
           style={{boxShadow: '0px 4px 32px rgba(0, 0, 0, 0.16)'}}
-          className={`w-48 space-y-1  bg-white px-3 py-3 radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-[320px] rounded-[12px]`}
+          className={`w-48 space-y-1  bg-white px-3 py-3 radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-[320px] rounded-[8px]`}
         >
           {/* Marketplace */}
           <Link href={`/`} legacyBehavior={true}>
             <DropdownMenu.Item asChild>
-              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/marketplace.svg'} size={40} />
                 <div>
                   <p className='text-[14px] leading-6'>Marketplace</p>
@@ -42,7 +42,7 @@ const ProductsDropdown: FC = () => {
           {/* NFT Embed */}
           <a href='https://www.nftembed.org/' target="_blank" rel="noreferrer">
             <DropdownMenu.Item asChild>
-              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/nft-embed.svg'} size={40} />
                 <div>
                   <p className='text-[14px] leading-6'>NFT Embed</p>
@@ -55,7 +55,7 @@ const ProductsDropdown: FC = () => {
           {/* NFT Torrent */}
           <a href='https://graviton.xyz/products/torrent' target="_blank" rel="noreferrer">
             <DropdownMenu.Item asChild>
-              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/nft-torrent.svg'} size={40} />
                 <div>
                   <p className='text-[14px] leading-6'>NFT Torrent</p>
@@ -68,7 +68,7 @@ const ProductsDropdown: FC = () => {
           {/* NFT Display */}
           <a href='https://graviton.xyz/products/display' target="_blank" rel="noreferrer">
             <DropdownMenu.Item asChild>
-              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/nft-display.svg'} size={40} />
                 <div>
                   <p className='text-[14px] leading-6'>NFT Display</p>
@@ -81,7 +81,7 @@ const ProductsDropdown: FC = () => {
           {/* Metaversian Republic */}
           <a href='https://metaversia.universe.xyz/' target="_blank" rel="noreferrer">
             <DropdownMenu.Item asChild>
-              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/metaverse-republic.svg'} size={40} />
                 <div>
                   <p className='text-[14px] leading-6'>Metaversian Republic</p>
