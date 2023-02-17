@@ -16,7 +16,7 @@ const MoreDropdown: FC = () => {
 
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger style={{fontWeight: '500'}} className="flex items-center focus-visible:outline-none">
+      <DropdownMenu.Trigger style={{fontWeight: '500'}} className="flex items-center focus-visible:outline-none hover:text-[#666666]">
         More <BiChevronDown />
       </DropdownMenu.Trigger>
 
@@ -24,7 +24,7 @@ const MoreDropdown: FC = () => {
       <DropdownMenu.Content align="center" sideOffset={6}>
         <div
           style={{boxShadow: '0px 4px 32px rgba(0, 0, 0, 0.16)'}}
-          className={`w-48 space-y-1  bg-white px-3 py-3 radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-[320px] rounded-[12px]`}
+          className={`w-48 space-y-1  bg-white px-3 py-3 radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-[320px] rounded-[8px]`}
         >
 
           <div className='flex gap-3'>
@@ -38,7 +38,7 @@ const MoreDropdown: FC = () => {
               {/* About */}
               <a href='https://www.universe.xyz/about' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/about.svg'
@@ -54,7 +54,7 @@ const MoreDropdown: FC = () => {
               {/* Whitepaper */}
               <a href='https://github.com/UniverseXYZ/UniverseXYZ-Whitepaper' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/whitepaper.svg'
@@ -70,7 +70,7 @@ const MoreDropdown: FC = () => {
               {/* Team */}
               <a href='https://www.universe.xyz/team' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/team.svg'
@@ -86,7 +86,7 @@ const MoreDropdown: FC = () => {
               {/* Docs */}
               <a href='https://docs.universe.xyz/' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/docs.svg'
@@ -102,7 +102,7 @@ const MoreDropdown: FC = () => {
               {/* Support */}
               <a href='https://universe.freshdesk.com/support/home' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/support.svg'
@@ -127,7 +127,7 @@ const MoreDropdown: FC = () => {
               {/* Governance */}
               <a href='https://gov.universe.xyz/governance' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/governance.svg'
@@ -143,7 +143,7 @@ const MoreDropdown: FC = () => {
               {/* Yield Farming */}
               <a href='https://gov.universe.xyz/yield-farming' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/yield-farming.svg'
@@ -159,7 +159,7 @@ const MoreDropdown: FC = () => {
               {/* Forum */}
               <a href='https://forum.universe.xyz/' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/forum.svg'
@@ -175,7 +175,7 @@ const MoreDropdown: FC = () => {
               {/* Signal */}
               <a href='https://snapshot.org/#/universexyz.eth/' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/signal.svg'
@@ -191,7 +191,7 @@ const MoreDropdown: FC = () => {
               {/* Airdrop */}
               <a href='https://gov.universe.xyz/airdrop' target="_blank" rel="noreferrer">
                 <DropdownMenu.Item asChild>
-                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[12px]">
+                  <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                     <img
                       className="object-fit"
                       src='/icons/main-nav/airdrop.svg'
