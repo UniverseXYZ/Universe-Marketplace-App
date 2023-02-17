@@ -24,7 +24,7 @@ const ProductsDropdown: FC = () => {
       <DropdownMenu.Content align="center" sideOffset={6}>
         <div
           style={{boxShadow: '0px 4px 32px rgba(0, 0, 0, 0.16)'}}
-          className={`w-48 space-y-1  bg-white px-3 py-3 radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-[320px] rounded-[8px]`}
+          className={`w-48 space-y-1 bg-white px-3 py-3 radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-[320px] rounded-[8px]`}
         >
           {/* Marketplace */}
           <Link href={`/`} legacyBehavior={true}>
