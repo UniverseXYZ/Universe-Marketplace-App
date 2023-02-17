@@ -6,9 +6,9 @@ const FOOTER_ENABLED = process.env.NEXT_PUBLIC_FOOTER_ENABLED == 'true'
 const Footer = () => {
   if (FOOTER_ENABLED)
     return (
-      <footer className="col-span-full flex flex-col items-center justify-between px-8 pb-8 pt-8 sm:flex-row md:px-16 border-t mt-12 border-[#0000001a]">
+      <footer className="flex w-full items-center flex-col xl:flex-row xl:justify-between px-8 py-5 md:px-16 border-t mt-12 border-[#0000001a]">
         {/* Links */}
-        <div className="mb-6 flex flex-row flex-wrap items-center justify-between gap-x-6 text-xs sm:mb-0 sm:gap-x-8 sm:text-sm text-[#00000099]">
+        <div className="mb-6 flex flex-col gap-3 md:flex-row items-center xl:justify-between gap-x-6 text-xs xl:mb-0 sm:gap-x-8 sm:text-sm text-[#00000099]">
           <span>
             Universe.xyz © 2023. Open-sourced.
           </span>
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
 
         {/* Social */}
-        <div className="flex flex-row items-center gap-x-6">
+        <div className="flex flex-row items-center gap-x-2">
           <Link href="https://twitter.com/universe_xyz" legacyBehavior={true}>
             <a className="flex items-center justify-center w-[40px] h-[40px] rounded-lg bg-[#00000008] hover:bg-[#0000001a]" target="_blank" rel="noreferrer">
               <FaTwitter className="h-[20px] w-[25px]" />
