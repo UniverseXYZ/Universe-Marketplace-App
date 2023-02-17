@@ -50,7 +50,7 @@ const ConnectWallet: FC = () => {
       <DropdownMenu.Content align="end" sideOffset={6}>
         <div
           style={{boxShadow: '0px 4px 32px rgba(0, 0, 0, 0.16)'}}
-          className="w-[240px] space-y-1 bg-white px-3 py-3 shadow-md radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-56 rounded-[8px]"
+          className="w-[240px] space-y-1 bg-white px-3 py-3 shadow-md radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-56 rounded-[16px]"
         >
           {/* Balance and ENS */}
           <div className='border rounded-lg mb-[8px]'>
