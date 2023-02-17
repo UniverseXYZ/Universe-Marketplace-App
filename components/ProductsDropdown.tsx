@@ -32,7 +32,7 @@ const ProductsDropdown: FC = () => {
               <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/marketplace.svg'} size={40} />
                 <div>
-                  <p className='text-[14px] leading-6'>Marketplace</p>
+                  <p className='text-[14px] leading-6 font-medium'>Marketplace</p>
                   <p className='text-[12px] leading-4 text-[#00000066]'>Buy & Sell NFTs</p>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const ProductsDropdown: FC = () => {
               <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/nft-embed.svg'} size={40} />
                 <div>
-                  <p className='text-[14px] leading-6'>NFT Embed</p>
+                  <p className='text-[14px] leading-6 font-medium'>NFT Embed</p>
                   <p className='text-[12px] leading-4 text-[#00000066]'>Display & sell NFTs on any website</p>
                 </div>
             </div>
@@ -58,7 +58,7 @@ const ProductsDropdown: FC = () => {
               <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/nft-torrent.svg'} size={40} />
                 <div>
-                  <p className='text-[14px] leading-6'>NFT Torrent</p>
+                  <p className='text-[14px] leading-6 font-medium'>NFT Torrent</p>
                   <p className='text-[12px] leading-4 text-[#00000066]'>Safely mint,seed and store your files</p>
                 </div>
             </div>
@@ -71,7 +71,7 @@ const ProductsDropdown: FC = () => {
               <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/nft-display.svg'} size={40} />
                 <div>
-                  <p className='text-[14px] leading-6'>NFT Display</p>
+                  <p className='text-[14px] leading-6 font-medium'>NFT Display</p>
                   <p className='text-[12px] leading-4 text-[#00000066]'>Showcase your favorites on any screen</p>
                 </div>
             </div>
@@ -84,7 +84,7 @@ const ProductsDropdown: FC = () => {
               <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} avatar={'/icons/main-nav/metaverse-republic.svg'} size={40} />
                 <div>
-                  <p className='text-[14px] leading-6'>Metaversian Republic</p>
+                  <p className='text-[14px] leading-6 font-medium'>Metaversian Republic</p>
                   <p className='text-[12px] leading-4 text-[#00000066]'>Polymorph shooter game</p>
                 </div>
             </div>
