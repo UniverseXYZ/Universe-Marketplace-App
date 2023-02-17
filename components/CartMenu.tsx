@@ -130,7 +130,13 @@ const CartMenu: FC = () => {
               {cartCount}
             </div>
           )}
-          <FiShoppingCart className="h-[18px] w-[18px]" />
+          <img
+            className="object-fit"
+            src='/icons/main-nav/cart.svg'
+            alt={'rarity'}
+            width='18px'
+            height='18px'
+          />
         </div>
       </Popover.Trigger>
       <StyledContent
