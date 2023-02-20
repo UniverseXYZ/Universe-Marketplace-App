@@ -60,7 +60,7 @@ const NFTDropsDropdown: FC = () => {
           </div>
 
           {/* Lobsters */}
-          <a href='https://www.universe.xyz/lobby-lobsters' target="_blank" rel="noreferrer">
+          <a href='https://universe.xyz/collections/0xc0cb81c1f89ab0873653f67eea42652f13cd8416' target="_blank" rel="noreferrer">
             <DropdownMenu.Item asChild>
               <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
                 <Avatar address={''} className="min-w-[40px]" avatar={'/icons/main-nav/lobsters.svg'} size={40} />
