@@ -65,12 +65,12 @@ const TokenLineItem: FC<TokenLineItemProps> = ({
         isUnavailable={isUnavailable}
         isOffer={isOffer}
       />
-      {!!isSuspicious && (
+      {/* {!!isSuspicious && (
         <ErrorWell
           css={{ p: '$3', mt: '$3', borderRadius: 4 }}
           message="Token is not tradable on OpenSea"
         />
-      )}
+      )} */}
     </Box>
   )
 }

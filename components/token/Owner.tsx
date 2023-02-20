@@ -58,7 +58,7 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea, collection }) => {
           )}
         <div className="reservoir-h3 mb-3 flex items-center gap-4 overflow-hidden font-headings dark:text-white">
           <div>{token?.name || `#${token?.tokenId}`}</div>
-          {bannedOnOpenSea && (
+          {/* {bannedOnOpenSea && (
             <Tooltip.Provider>
               <Tooltip.Root delayDuration={0}>
                 <Tooltip.Trigger>
@@ -73,7 +73,7 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea, collection }) => {
                 </Tooltip.Content>
               </Tooltip.Root>
             </Tooltip.Provider>
-          )}
+          )} */}
         </div>
 
         <div className="reservoir-h6 mb-2 font-headings dark:text-white">
