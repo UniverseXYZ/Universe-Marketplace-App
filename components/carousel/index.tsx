@@ -6,9 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 const SETTINGS = {
     dots: true,
     infinite: true,
-    speed: 500,
-    // centerMode: true,
-    // centerPadding: "60px",
+    speed: 2000,
+    // autoplay: true,
+    autoplaySpeed: 10000,
+    pauseOnHover: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dotsClass: "slick-dots",
@@ -107,7 +108,7 @@ const CustomSlide: FC<SlideProps> = ({
         className="h-[400px] rounded-3xl carousel-image relative bg-no-repeat"
       >
         {/* Description  */}
-        <div className="text-white px-10 h-full flex flex-col justify-end pb-7 carousel-item-description absolute top-[75px]">
+        <div className="text-white px-10 h-full z-10 flex flex-col justify-end pb-7 carousel-item-description absolute top-[75px]">
           <img
             className="object-fit mb-[24px]"
             src={iconUrl}
@@ -159,14 +160,14 @@ const CustomSlide: FC<SlideProps> = ({
           )}
           <a href={externalUrl} target="_blank" rel="noreferrer" className="w-fit">
             <button
-              className={`self-start border border-[#ffffff1a] font-medium px-[16px] py-[11px] rounded-lg ${learnMoreClassName}`}
+              className={`self-start border border-[#ffffff1a] hover:bg-[#191919] font-medium px-[16px] py-[11px] rounded-lg ${learnMoreClassName}`}
             >
               Learn More
             </button>
           </a>
         </div>
         {supportedPlatforms && (
-          <div className="absolute right-0 bottom-0 mb-6 mr-6 w-[112px] h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 hidden lg:flex">
+          <div className="z-10 absolute right-0 bottom-0 mb-6 mr-6 w-[112px] h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 hidden lg:flex">
             {supportedPlatforms?.apple && (
               <img
                 className="object-fit"
@@ -208,13 +209,32 @@ const CustomSlide: FC<SlideProps> = ({
         {/* eslint-disable-next-line react/no-unknown-property */}
         <style jsx global>{`
           .carousel-image {
-            background-position: center;
-            background-size: 105% 105% !important;
-            transition:  background-size 0.25s !important;
+            position: relative;
             overflow: hidden !important;
+            background-position: center center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
           }
-          .carousel-image:hover {
-            background-size: 100% 100% !important;
+          .carousel-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: inherit;
+            background-size: cover;
+            transform-origin: center;
+            transition: transform .4s ease-in-out;
+          }
+          .carousel-image::after {
+              transform: scale(1.05);
+          }
+          .carousel-image::focus {
+            transform: scale(1);
+          }
+          .carousel-image:hover:after {
+            transform: scale(1);
           }
           .carousel-item-description {
             transition: top 0.5s !important;
@@ -222,12 +242,10 @@ const CustomSlide: FC<SlideProps> = ({
           .carousel-image:hover .carousel-item-description {
             top: -0px !important;
           }
+
           @media (max-width: 768px) {
-            .carousel-image {
-              background-size: cover !important;
-            }
-            .carousel-image:hover {
-              background-size: cover !important;
+            .carousel-image::after {
+              background-position: bottom left !important;
             }
           }
         `}</style>
@@ -265,7 +283,7 @@ const Carousel: FC = () => {
         iconUrl="/carousel-images/nft-embed-icon.svg"
         titleClassName="text-black"
         descriptionClassName="text-black"
-        learnMoreClassName="border-[#0000001a] text-black"
+        learnMoreClassName="border-[#0000001a] text-black hover:bg-[#F2F2F2]"
       />
       <CustomSlide
         externalUrl="https://xeenon.xyz/"
