@@ -76,7 +76,7 @@ const MoreDropdown: FC = () => {
                       width='24px'
                       height='24px'
                     />
-                    <p className='text-[14px] leading-6 font-medium'>Team</p>
+                    <p className='text-[14px] leading-6 font-medium'>Contributors</p>
                 </div>
                 </DropdownMenu.Item>
               </a>
