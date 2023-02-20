@@ -7,7 +7,7 @@ const SETTINGS = {
     dots: true,
     infinite: true,
     speed: 2000,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 10000,
     pauseOnHover: true,
     slidesToShow: 1,
@@ -56,8 +56,8 @@ const SETTINGS = {
              }
              div.slick-list {
               border-radius: 24px;
-              box-shadow: 0px 0px 80px rgba(91, 23, 85, 0.4);
-              background: black;
+              box-shadow: 0px 0px 80px rgb(91 23 85 / 20%);
+              background: rgb(91 23 85 / 10%);
              }
              .slick-arrow {
               display: none !important;
@@ -100,6 +100,11 @@ const CustomSlide: FC<SlideProps> = ({
     learnMoreClassName = "",
     supportedPlatforms
   }) => {
+  const supportedPlatformsLength = Object.values(supportedPlatforms || {}).reduce((res, curr) => {
+    if (curr) res +=1
+    return res;
+  } , 0);
+
   return (
       <div
         style={{
@@ -119,7 +124,7 @@ const CustomSlide: FC<SlideProps> = ({
           <p className={`font-bold text-[32px] leading-[40px] ${titleClassName}`}>{title}</p>
           <p className={`text-[16px] leading-[24px] max-w-[480px] mb-5 ${descriptionClassName}`}>{description}</p>
           {supportedPlatforms && (
-            <div className="mb-6 mr-6 w-[112px] h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 flex lg:hidden">
+            <div className={`mb-6 mr-6 ${supportedPlatformsLength > 2 ? 'w-[112px]' : 'w-[80px]'} h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 flex lg:hidden`}>
               {supportedPlatforms?.apple && (
                 <img
                   className="object-fit"
@@ -160,14 +165,14 @@ const CustomSlide: FC<SlideProps> = ({
           )}
           <a href={externalUrl} target="_blank" rel="noreferrer" className="w-fit">
             <button
-              className={`self-start border border-[#ffffff1a] hover:bg-[#191919] font-medium px-[16px] py-[11px] rounded-lg ${learnMoreClassName}`}
+              className={`self-start border border-[#ffffff1a] hover:bg-[#ffffff1a] font-medium px-[16px] py-[11px] rounded-lg ${learnMoreClassName}`}
             >
               Learn More
             </button>
           </a>
         </div>
         {supportedPlatforms && (
-          <div className="z-10 absolute right-0 bottom-0 mb-6 mr-6 w-[112px] h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 hidden lg:flex">
+          <div className={`z-10 absolute right-0 bottom-0 mb-6 mr-6 ${supportedPlatformsLength > 2 ? 'w-[112px]' : 'w-[80px]'} h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 hidden lg:flex`}>
             {supportedPlatforms?.apple && (
               <img
                 className="object-fit"
@@ -283,7 +288,7 @@ const Carousel: FC = () => {
         iconUrl="/carousel-images/nft-embed-icon.svg"
         titleClassName="text-black"
         descriptionClassName="text-black"
-        learnMoreClassName="border-[#0000001a] text-black hover:bg-[#F2F2F2]"
+        learnMoreClassName="border-[#0000001a] text-black hover:bg-[#0000000d]"
       />
       <CustomSlide
         externalUrl="https://xeenon.xyz/"
