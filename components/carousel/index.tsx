@@ -7,7 +7,7 @@ const SETTINGS = {
     dots: true,
     infinite: true,
     speed: 2000,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 10000,
     pauseOnHover: true,
     slidesToShow: 1,
