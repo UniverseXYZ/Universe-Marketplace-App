@@ -55,7 +55,8 @@ const SETTINGS = {
              }
              div.slick-list {
               border-radius: 24px;
-              box-shadow: 0px 0px 80px rgba(91, 23, 85, 0.4)
+              box-shadow: 0px 0px 80px rgba(91, 23, 85, 0.4);
+              background: black;
              }
              .slick-arrow {
               display: none !important;
