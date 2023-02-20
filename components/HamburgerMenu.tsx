@@ -299,7 +299,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                     width='14px'
                     height='14px'
                   />
-                  <p className='text-[14px] leading-6 font-medium'>Team</p>
+                  <p className='text-[14px] leading-6 font-medium'>Contributors</p>
                 </div>
               </a>
 

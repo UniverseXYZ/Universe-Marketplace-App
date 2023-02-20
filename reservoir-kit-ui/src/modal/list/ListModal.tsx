@@ -693,30 +693,6 @@ export function ListModal({
                       </Span>{' '}
                       has been listed for sale
                     </Text>
-                    <Text style="subtitle2" as="p" css={{ mb: '$3' }}>
-                      View Listing on
-                    </Text>
-                    <Flex css={{ gap: '$3' }}>
-                      {listingData.map((data) => {
-                        const source =
-                          data.listing.orderbook === 'universe' &&
-                          client?.source
-                            ? client?.source
-                            : data.marketplace.name
-                        return (
-                          <a
-                            key={data.listing.orderbook}
-                            target="_blank"
-                            href={`${client?.apiBase}/redirect/sources/${source}/tokens/${token.token?.contract}:${token?.token?.tokenId}/link/v2`} rel="noreferrer"
-                          >
-                            <Image
-                              css={{ width: 24 }}
-                              src={data.marketplace.imageUrl}
-                            />
-                          </a>
-                        )
-                      })}
-                    </Flex>
                   </Flex>
 
                   <Flex
@@ -737,7 +713,7 @@ export function ListModal({
                               onClose()
                             }
                           }}
-                          css={{ flex: 1 }}
+                          css={{ flex: 1, backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' } }
                           color="secondary"
                         >
                           Close
@@ -763,7 +739,7 @@ export function ListModal({
                             onClose()
                           }
                         }}
-                        style={{ flex: 1 }}
+                        style={{ flex: 1, backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' } }
                         color="primary"
                       >
                         Close
