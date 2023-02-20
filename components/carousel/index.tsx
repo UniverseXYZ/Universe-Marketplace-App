@@ -215,12 +215,19 @@ const CustomSlide: FC<SlideProps> = ({
           .carousel-image:hover {
             background-size: 100% 100% !important;
           }
-
           .carousel-item-description {
             transition: top 0.5s !important;
           }
           .carousel-image:hover .carousel-item-description {
             top: -0px !important;
+          }
+          @media (max-width: 768px) {
+            .carousel-image {
+              background-size: cover !important;
+            }
+            .carousel-image:hover {
+              background-size: cover !important;
+            }
           }
         `}</style>
       </div>
