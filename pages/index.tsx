@@ -97,7 +97,7 @@ const Home: NextPage<Props> = ({ fallback }) => {
           ],
         }}
         />
-      <div className='col-span-full px-6 md:px-16 h-[400px] my-[45px]'>
+      <div className='col-span-full px-5 md:px-16 h-[400px] my-[45px]'>
         <Carousel />
       </div>
       <div className="col-span-full px-6 md:px-16">
