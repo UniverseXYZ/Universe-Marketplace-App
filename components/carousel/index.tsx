@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const SETTINGS = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 1400,
     // autoplay: true,
     autoplaySpeed: 10000,
     pauseOnHover: true,
@@ -32,6 +32,10 @@ const SETTINGS = {
                 width: 8px !important;
                 height: 8px !important;
              }
+             div.slick-dots ul > li:hover {
+              width: 14px !important;
+              height: 14px !important;
+           }
               div.slick-dots ul > li.slick-active {
                 background: linear-gradient(135deg, #BCEB00 15.57%, #00EAEA 84.88%) !important;
                 width: 14px !important;
@@ -61,6 +65,10 @@ const SETTINGS = {
              }
              .slick-arrow {
               display: none !important;
+             }
+             .slick-track {
+              display: flex;
+              gap: 0.75rem;
              }
             `}</style>
           </div>
