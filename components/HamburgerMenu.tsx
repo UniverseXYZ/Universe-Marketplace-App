@@ -227,7 +227,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
               </div>
 
               {/* Lobsters */}
-              <a href='https://www.universe.xyz/lobby-lobsters' target="_blank" rel="noreferrer">
+              <a href='https://universe.xyz/collections/0xc0cb81c1f89ab0873653f67eea42652f13cd8416' target="_blank" rel="noreferrer">
                 <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none">
                   <Avatar address={''} className="min-w-[40px]" avatar={'/icons/main-nav/lobsters.svg'} size={40} />
                   <div>
