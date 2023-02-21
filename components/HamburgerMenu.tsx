@@ -176,13 +176,35 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                 </div>
               </a>
 
+              {/* Xeenon */}
+              <a href='https://xeenon.xyz/' target="_blank" rel="noreferrer">
+                  <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none">
+                    <Avatar address={''} avatar={'/icons/main-nav/xeenon.svg'} size={40} />
+                    <div>
+                      <p className='text-[14px] leading-6'>Xeenon</p>
+                      <p className='text-[12px] leading-4 text-[#00000066]'>A WEB3 Media Platform</p>
+                    </div>
+                </div>
+              </a>
+
               {/* Metaversian Republic */}
               <a href='https://metaversia.universe.xyz/' target="_blank" rel="noreferrer">
-                  <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none border-b pb-5">
+                  <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none">
                     <Avatar address={''} avatar={'/icons/main-nav/metaverse-republic.svg'} size={40} />
                     <div>
                       <p className='text-[14px] leading-6'>Metaversian Republic</p>
                       <p className='text-[12px] leading-4 text-[#00000066]'>Polymorph shooter game</p>
+                    </div>
+                </div>
+              </a>
+
+              {/* Feta */}
+              <a href='https://linktr.ee/fetamarket' target="_blank" rel="noreferrer">
+                  <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none border-b pb-5">
+                    <Avatar address={''} avatar={'/icons/main-nav/feta.svg'} size={40} />
+                    <div>
+                      <p className='text-[14px] leading-6'>Feta</p>
+                      <p className='text-[12px] leading-4 text-[#00000066]'>The NFT Options Marketplace</p>
                     </div>
                 </div>
               </a>
