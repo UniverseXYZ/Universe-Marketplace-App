@@ -312,7 +312,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
               </a>
 
               {/* Team */}
-              <Link href={`/contributors`} target="_blank" rel="noreferrer" passHref>
+              <Link href={`/contributors`} passHref>
                 <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none">
                   <img
                     className="object-fit"
