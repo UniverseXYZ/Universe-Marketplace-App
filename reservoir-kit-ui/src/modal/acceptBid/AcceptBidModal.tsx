@@ -254,9 +254,17 @@ export function AcceptBidModal({
                   color="primary"
                   onClick={acceptBid}
                   css={{ backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px'}}
+                  className="acceptButton"
                 >
                   Accept
                 </Button>
+                {/* eslint-disable-next-line react/no-unknown-property */}
+                <style jsx global>{`
+                  .acceptButton:hover {
+                    background-image: linear-gradient(to right, #bceb00cc, #00eaeacc);
+                    transition-duration: 100s;
+                  }
+                `}</style>
               </Flex>
             )}
 

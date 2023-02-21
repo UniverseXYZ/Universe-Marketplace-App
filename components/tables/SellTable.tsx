@@ -183,7 +183,7 @@ const SellTable: FC<Props> = ({ modal, isOwner, address }) => {
               <div className="flex items-center justify-center pt-4">
                 <AcceptBidModal
                   trigger={
-                    <button className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none text-black mr-2 w-full min-w-[120px] py-2 text-sm focus:ring-0 sm:w-auto">
+                    <button className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc] duration-[100s] border-none text-black mr-2 w-full min-w-[120px] py-2 text-sm focus:ring-0 sm:w-auto">
                       <FaBolt />
                       Sell
                     </button>
@@ -409,7 +409,7 @@ const SellTable: FC<Props> = ({ modal, isOwner, address }) => {
                   <div className="flex items-center">
                     <AcceptBidModal
                       trigger={
-                        <button className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none text-black mr-3 min-w-[120px] justify-center py-2 text-sm">
+                        <button className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc] duration-[100s] border-none text-black mr-3 min-w-[120px] justify-center py-2 text-sm">
                           <FaBolt />
                           Sell
                         </button>
