@@ -7,7 +7,7 @@ const SETTINGS = {
     dots: true,
     infinite: true,
     speed: 1400,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 10000,
     pauseOnHover: true,
     slidesToShow: 1,
@@ -121,7 +121,7 @@ const CustomSlide: FC<SlideProps> = ({
         className="h-[400px] rounded-3xl carousel-image relative bg-no-repeat"
       >
         {/* Description  */}
-        <div className="text-white px-10 h-full z-10 flex flex-col justify-end pb-7 carousel-item-description absolute top-[75px]">
+        <div className="text-white px-10 h-full z-10 flex flex-col justify-end pb-7 carousel-item-description absolute md:top-[75px]">
           <img
             className="object-fit mb-[24px]"
             src={iconUrl}
@@ -249,11 +249,14 @@ const CustomSlide: FC<SlideProps> = ({
           .carousel-image:hover:after {
             transform: scale(1);
           }
-          .carousel-item-description {
-            transition: top 0.5s !important;
-          }
-          .carousel-image:hover .carousel-item-description {
-            top: -0px !important;
+
+          @media (min-width: 768px) {
+            .carousel-item-description {
+              transition: top 0.5s !important;
+            }
+            .carousel-image:hover .carousel-item-description {
+              top: -0px !important;
+            }
           }
 
           @media (max-width: 768px) {
