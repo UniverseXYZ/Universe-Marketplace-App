@@ -183,7 +183,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
 
       {FOOTER_ENABLED && !expanded && (
         <button
-          className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] border-none font-medium px-[16px] py-[11px] mx-auto my-3 text-black"
+          className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc] duration-[100s] border-none font-medium px-[16px] py-[11px] mx-auto my-3 text-black"
           onClick={() => {
             setExpanded(true)
           }}

@@ -409,9 +409,17 @@ export function ListModal({
                     <Button
                       onClick={() => setListStep(ListStep.SetPrice)}
                       css={{ width: '100%', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px'}}
+                      className="setPriceButton"
                     >
                       Set your price
                     </Button>
+                    {/* eslint-disable-next-line react/no-unknown-property */}
+                    <style jsx global>{`
+                      .setPriceButton:hover {
+                        background-image: linear-gradient(to right, #bceb00cc, #00eaeacc);
+                        transition-duration: 100s;
+                      }
+                    `}</style>
                   </Box>
                 </MainContainer>
               </ContentContainer>
@@ -569,10 +577,18 @@ export function ListModal({
                           marketplace.price === '' || marketplace.price == 0
                       )}
                       onClick={listToken}
+                      className="listForSaleButton"
                       css={{ width: '100%', backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }}
                     >
                       List for sale
                     </Button>
+                    {/* eslint-disable-next-line react/no-unknown-property */}
+                    <style jsx global>{`
+                      .listForSaleButton:hover {
+                        background-image: linear-gradient(to right, #bceb00cc, #00eaeacc);
+                        transition-duration: 100s;
+                      }
+                    `}</style>
                   </Box>
                 </MainContainer>
               </ContentContainer>
@@ -643,9 +659,16 @@ export function ListModal({
                       >
                         Edit Listing
                       </Button>
-                      <Button css={{ flex: 1, backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }} onClick={() => listToken()}>
+                      <Button className='retryButton' css={{ flex: 1, backgroundImage: 'linear-gradient(to right, #BCEB00, #00EAEA)', color: "#000000", borderRadius: '8px' }} onClick={() => listToken()}>
                         Retry
                       </Button>
+                      {/* eslint-disable-next-line react/no-unknown-property */}
+                      <style jsx global>{`
+                        .retryButton:hover {
+                          background-image: linear-gradient(to right, #bceb00cc, #00eaeacc);
+                          transition-duration: 100s;
+                        }
+                      `}</style>
                     </Flex>
                   )}
                 </MainContainer>
