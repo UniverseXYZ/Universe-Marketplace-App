@@ -1,5 +1,7 @@
 import { FaTwitter, FaDiscord, FaYoutube, FaMedium, FaMediumM } from 'react-icons/fa'
 import Link from 'next/link'
+import { CoingeckoIcon } from 'public/icons/footer/CoingeckoIcon'
+import { MediumIcon } from 'public/icons/footer/MediumIcon'
 
 const FOOTER_ENABLED = process.env.NEXT_PUBLIC_FOOTER_ENABLED == 'true'
 
@@ -36,6 +38,11 @@ const Footer = () => {
               <FaDiscord className="h-[19px] w-[25px]" />
             </a>
           </Link>
+          <Link href="https://www.coingecko.com/en/coins/universe-xyz" className="ml-5" legacyBehavior={true}>
+            <a className="flex items-center justify-center w-[40px] h-[40px] rounded-lg bg-[#00000008] hover:bg-[#0000001a]" target="_blank" rel="noreferrer">
+              <CoingeckoIcon />
+            </a>
+          </Link>
           <Link href="https://www.youtube.com/channel/UCWt00md9T2b4iTsHWp_Fapw" className="ml-5" legacyBehavior={true}>
             <a className="flex items-center justify-center w-[40px] h-[40px] rounded-lg bg-[#00000008] hover:bg-[#0000001a]" target="_blank" rel="noreferrer">
               <FaYoutube className="h-[19px] w-[25px]" />
@@ -43,7 +50,7 @@ const Footer = () => {
           </Link>
           <Link href="https://medium.com/universe-xyz" className="ml-5" legacyBehavior={true}>
             <a className="flex items-center justify-center w-[40px] h-[40px] rounded-lg bg-[#00000008] hover:bg-[#0000001a]" target="_blank" rel="noreferrer">
-              <FaMediumM className="h-[19px] w-[25px]" />
+              <MediumIcon />
             </a>
           </Link>
         </div>
