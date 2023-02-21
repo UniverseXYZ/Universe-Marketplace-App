@@ -78,6 +78,19 @@ const ProductsDropdown: FC = () => {
             </DropdownMenu.Item>
           </a>
 
+          {/* Xeenon */}
+          <a href='https://xeenon.xyz/' target="_blank" rel="noreferrer">
+            <DropdownMenu.Item asChild>
+              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
+                <Avatar address={''} avatar={'/icons/main-nav/xeenon.svg'} size={40} />
+                <div>
+                  <p className='text-[14px] leading-6 font-medium'>Xeenon</p>
+                  <p className='text-[12px] leading-4 text-[#00000066]'>A WEB3 Media Platform</p>
+                </div>
+            </div>
+            </DropdownMenu.Item>
+          </a>
+
           {/* Metaversian Republic */}
           <a href='https://metaversia.universe.xyz/' target="_blank" rel="noreferrer">
             <DropdownMenu.Item asChild>
@@ -86,6 +99,19 @@ const ProductsDropdown: FC = () => {
                 <div>
                   <p className='text-[14px] leading-6 font-medium'>Metaversian Republic</p>
                   <p className='text-[12px] leading-4 text-[#00000066]'>Polymorph shooter game</p>
+                </div>
+            </div>
+            </DropdownMenu.Item>
+          </a>
+
+          {/* Feta */}
+          <a href='https://linktr.ee/fetamarket' target="_blank" rel="noreferrer">
+            <DropdownMenu.Item asChild>
+              <div className="group flex w-full items-center gap-2 px-2 py-2 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 cursor-pointer rounded-[8px]">
+                <Avatar address={''} avatar={'/icons/main-nav/feta.svg'} size={40} />
+                <div>
+                  <p className='text-[14px] leading-6 font-medium'>Feta</p>
+                  <p className='text-[12px] leading-4 text-[#00000066]'>The NFT Options Marketplace</p>
                 </div>
             </div>
             </DropdownMenu.Item>
