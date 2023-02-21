@@ -16,7 +16,7 @@ function NetworkWarning() {
 
   if (chainId && signer && activeChain?.id !== +chainId) {
     return (
-      <div className="flex w-screen items-center justify-center gap-2 bg-[#FFA500] p-4 text-black">
+      <div className="flex w-screen items-center justify-center gap-2 p-4 text-black"  style={{backgroundImage: 'linear-gradient(135deg, #BCEB00 15.57%, #00EAEA 84.88%)'}}>
         <span>You are connected to the wrong network.</span>
         <button
           onClick={() => {
