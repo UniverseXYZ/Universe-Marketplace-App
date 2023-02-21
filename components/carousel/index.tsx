@@ -121,16 +121,16 @@ const CustomSlide: FC<SlideProps> = ({
         className="h-[400px] rounded-3xl carousel-image relative bg-no-repeat"
       >
         {/* Description  */}
-        <div className="text-white px-10 h-full z-10 flex flex-col justify-end pb-7 carousel-item-description absolute md:top-[75px]">
+        <div className="text-white px-10 h-full z-10 flex flex-col justify-end pb-5 lg:pb-7 carousel-item-description absolute md:top-[75px]">
           <img
-            className="object-fit mb-[24px]"
+            className="object-fit mb-[18px] lg:mb-[24px]"
             src={iconUrl}
             alt={'rarity'}
             width='48px'
             height='48px'
           />
-          <p className={`font-bold text-[32px] leading-[40px] ${titleClassName}`}>{title}</p>
-          <p className={`text-[16px] leading-[24px] max-w-[480px] mb-5 ${descriptionClassName}`}>{description}</p>
+          <p className={`font-bold text-[24px] leading-[32px] lg:text-[32px] lg:leading-[40px] mb-[8px] ${titleClassName}`}>{title}</p>
+          <p className={`text-[14px] leading-[20px] lg:text-[16px] lg:leading-[24px] max-w-[480px] mb-5 ${descriptionClassName}`}>{description}</p>
           {supportedPlatforms && (
             <div className={`mb-6 mr-6 ${supportedPlatformsLength > 2 ? 'w-[112px]' : 'w-[80px]'} h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 flex lg:hidden`}>
               {supportedPlatforms?.apple && (
@@ -324,7 +324,7 @@ const Carousel: FC = () => {
         index={6}
         imageUrl="/carousel-images/feta.jpg"
         title="Feta"
-        description="The NFT Options Marketplace. Trade for the Top 20 NFT collections and get paid to write your own option contracts."
+        description="The NFT Options Marketplace. Trade the top 20 NFT collections and get paid to write options."
         iconUrl="/carousel-images/feta-icon.svg"
       />
     </Slider>
