@@ -415,7 +415,7 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
   return (
     <tr
       key={activity.txHash}
-      className="h-24 border-b border-gray-300 dark:border-[#525252]"
+      className="h-24 border-b border-gray-300 dark:border-[#525252]  tr-hover"
     >
       <td className="px-6 py-4">
         <div className="mr-2.5 flex items-center">
