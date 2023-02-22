@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Sharp Grotesk';
+    src: url('../fonts/sharpgrotesk/SharpGroteskBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Sharp Grotesk';
+    src: url('../fonts/spacegrotesk/SpaceGrotesk-Regular.woff2') format('woff2'),
+        url('../fonts/spacegrotesk/SpaceGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'Sharp Grotesk';
+    src: url('../fonts/sharpgrotesk/SharpGroteskSmBold.woff2') format('woff2'),
+        url('../fonts/sharpgrotesk/SharpGroteskSmBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk';
+    src: url('../fonts/sharpgrotesk/SharpGroteskMedium.woff2') format('woff2'),
+        url('../fonts/sharpgrotesk/SharpGroteskMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Sharp Grotesk';
+    src: url('../fonts/spacegrotesk/SpaceGrotesk-Light.woff2') format('woff2'),
+        url('../fonts/spacegrotesk/SpaceGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+} */

@@ -641,8 +641,8 @@ const Contributors: NextPage = () => {
         }}
       />
       <div className="item-center col-span-full mx-auto flex w-screen max-w-[1500px] flex-col px-4 py-8 text-center sm:px-12 md:py-16">
-        <h1 className="mb-5 text-[36px] font-bold">Meet the Universe Crew</h1>
-        <p className="mb-20 text-[#00000099]">
+        <h1 className="mb-5 text-[36px] leading-[48px] font-semibold font-sharpgrotesk">Meet the Universe Crew</h1>
+        <p className="mb-[64px] text-[24px] leading-[48px] text-[#00000099]">
           Our team is full of creators, artists and DeFi minds from all over the
           world with a shared goal in mind, empower artists.
         </p>
@@ -664,7 +664,7 @@ const Contributors: NextPage = () => {
         >
           {contributors?.map((contributor, index) => {
             return (
-              <>
+              <div key={index} className="min-h-[262px] mb-11 mt-3 ">
                 <Image
                   src={contributor.avatar}
                   alt={contributor.name}
@@ -672,12 +672,12 @@ const Contributors: NextPage = () => {
                   key={contributor.id}
                 />
                 <h2
-                  className="mb-11 mt-3 text-left font-bold"
+                  className="text-left font-semibold font-sharpgrotesk mt-[12px]"
                   style={{ lineHeight: '130%' }}
                 >
                   {contributor.name}
                 </h2>
-              </>
+              </div>
             )
           })}
         </Masonry>

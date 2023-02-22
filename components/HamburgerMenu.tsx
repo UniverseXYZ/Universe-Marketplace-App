@@ -284,7 +284,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
             {/* @ts-ignore */}
             <AccordionContent>
               {/* About */}
-              <a href='https://www.universe.xyz/about' target="_blank" rel="noreferrer">
+              <Link href={`/about`} passHref>
                 <div className="group flex w-full items-center gap-3 px-3 py-[12px] outline-none">
                   <img
                     className="object-fit"
@@ -295,7 +295,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                   />
                   <p className='text-[14px] leading-6 font-medium'>About</p>
                 </div>
-              </a>
+              </Link>
 
               {/* Whitepaper */}
               <a href='https://github.com/UniverseXYZ/UniverseXYZ-Whitepaper' target="_blank" rel="noreferrer">
