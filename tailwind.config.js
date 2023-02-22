@@ -29,6 +29,7 @@ module.exports = {
         sans: [`"${BODY_FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
         headings: [`"${FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
         mono: [`"${MONO_FONT_FAMILY}"`, ...defaultTheme.fontFamily.mono],
+        sharpgrotesk: [`"Sharp Grotesk"`],
       },
       keyframes: {
         'slide-down': {

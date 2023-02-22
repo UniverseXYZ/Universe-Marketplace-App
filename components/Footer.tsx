@@ -8,7 +8,7 @@ const FOOTER_ENABLED = process.env.NEXT_PUBLIC_FOOTER_ENABLED == 'true'
 const Footer = () => {
   if (FOOTER_ENABLED)
     return (
-      <footer className="flex w-full items-center flex-col xl:flex-row xl:justify-between px-8 py-5 md:px-16 border-t mt-12 border-[#0000001a]">
+      <footer className="flex w-full items-center flex-col xl:flex-row xl:justify-between px-8 py-5 md:px-16 border-t bg-white border-[#0000001a]">
         {/* Links */}
         <div className="mb-6 flex flex-col gap-3 md:flex-row items-center xl:justify-between gap-x-6 text-xs xl:mb-0 sm:gap-x-8 text-[#00000099]">
           <span>
