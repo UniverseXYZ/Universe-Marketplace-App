@@ -22,15 +22,15 @@ const About: NextPage = () => {
           height='390px'
         />
 
-        <div className='flex items-center justify-between max-w-[1110px]'>
-          <div className='max-w-[627px]'>
-            <p className='text-[48px] leading-[58px] font-semibold text-[#FFFFFF] mb-[24px] font-sharpgrotesk'>Welcome to the NFT Universe Built on Ethereum</p>
-            <p className='text-[18px] leading-[150%] text-[#ffffff99] max-w-[475px]'>
+        <div className='flex flex-col-reverse lg:flex-row items-center lg:justify-between max-w-[1110px]'>
+          <div className='max-w-[627px] px-5 pb-5 lg:px-0 lg:pb-0'>
+            <p className='text-[24px] leading-[32px] lg:text-[48px] lg:leading-[58px] font-semibold text-[#FFFFFF] mb-[24px] font-sharpgrotesk'>Welcome to the NFT Universe Built on Ethereum</p>
+            <p className='text-[14px] leading-[20px] lg:text-[18px] lg:leading-[150%] text-[#ffffff99] max-w-[475px]'>
               Launch your own community-driven NFT universe baked with social tools, media services, and distribution - underpinned by the native $XYZ token.
             </p>
           </div>
-          <div>
-            <video width="538" height="485" autoPlay loop muted>
+          <div className='max-w-[285px] max-h-[285px] lg:max-w-[538px] lg:max-h-[485px]'>
+            <video width="100%" height="100%" autoPlay loop muted>
               <source src="/about/hero_video.mp4" type="video/mp4" />
             </video>
           </div>
@@ -52,7 +52,7 @@ const About: NextPage = () => {
           width='508px'
           height='508px'
         />
-        <div className='max-w-[1110px] my-[64px] about-description backdrop-blur-[20px] py-[64px] px-[95px] rounded-[20px] opacity-90'>
+        <div className='max-w-[1110px] my-[64px] about-description backdrop-blur-[20px] py-[25px] lg:py-[64px] px-[20px] lg:px-[95px] rounded-[20px] opacity-90'>
           <p className='text-[32px] leading-[40px] font-semibold pb-[16px] font-sharpgrotesk'>Universe Protocol and the xyzDAO</p>
           <p className='text-[18px] leading-[150%] font-semibold pb-[16px]'>Meta: To create a system that doesn’t live off the backs of artists and creates a sustainable ecosystem for artists and fans alike.</p>
           <p className='text-[16px] leading-[24px] pb-[20px] text-[#00000099]'>Welcome to the world of Universe, the ultimate NFT marketplace designed exclusively for the creative minds! Our platform was meticulously crafted with one idea in mind: to empower the artistic community and showcase their incredible talent to the world.</p>
