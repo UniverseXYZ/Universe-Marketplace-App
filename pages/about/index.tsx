@@ -36,7 +36,7 @@ const About: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className='col-span-full flex items-center justify-center relative'>
+      <div className='col-span-full flex items-center justify-center relative px-5'>
         <img
           className="absolute left-[-5%] bottom-[-5%] z-[-1]"
           src='/about/ellipse-left.svg'
