@@ -46,7 +46,7 @@ const About: NextPage = () => {
         />
 
         <img
-          className="absolute top-[-5%] right-[-5%] z-[-1]"
+          className="absolute top-[-5%] right-[0%] lg:right-[-5%] z-[-1]"
           src='/about/ellipse-right.svg'
           alt={'rarity'}
           width='508px'
