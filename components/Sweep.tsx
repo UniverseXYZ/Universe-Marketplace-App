@@ -238,7 +238,7 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
   if (!signer) {
     return (
       <button
-        className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc] duration-[100s] border-none text-black gap-2 dark:ring-primary-900 dark:focus:ring-4"
+        className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc] transition-[background] duration-[100s] border-none text-black gap-2 dark:ring-primary-900 dark:focus:ring-4"
         onClick={() => {
           if (openConnectModal) {
             openConnectModal()
@@ -260,7 +260,7 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
           isInTheWrongNetwork ||
           sweepTokens?.length === 0
         }
-        className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc] duration-[100s] border-none gap-2 text-black dark:ring-primary-900 dark:focus:ring-4"
+        className="btn-primary-fill bg-gradient-to-r from-[#BCEB00] to-[#00EAEA] hover:from-[#bceb00cc] hover:to-[#00eaeacc] transition-[background] duration-[100s] border-none gap-2 text-black dark:ring-primary-900 dark:focus:ring-4"
       >
         <FaBroom className="text-black" />
         Sweep
