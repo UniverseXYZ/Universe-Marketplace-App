@@ -131,7 +131,7 @@ const CustomSlide: FC<SlideProps> = ({
           <p className={`font-bold text-[24px] leading-[32px] lg:text-[32px] lg:leading-[40px] mb-[8px] ${titleClassName}`}>{title}</p>
           <p className={`text-[14px] leading-[20px] lg:text-[16px] lg:leading-[24px] max-w-[480px] mb-5 ${descriptionClassName}`}>{description}</p>
           {supportedPlatforms && (
-            <div className={`mb-6 mr-6 ${supportedPlatformsLength > 2 ? 'w-[112px]' : 'w-[80px]'} h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 flex lg:hidden`}>
+            <div className={`mb-6 mr-6 ${supportedPlatformsLength > 2 ? 'w-[112px]' : 'w-[80px]'} h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 backdrop-blur-sm flex lg:hidden`}>
               {supportedPlatforms?.apple && (
                 <img
                   className="object-fit"
@@ -179,7 +179,7 @@ const CustomSlide: FC<SlideProps> = ({
           </a>
         </div>
         {supportedPlatforms && (
-          <div className={`z-10 absolute right-0 bottom-0 mb-6 mr-6 ${supportedPlatformsLength > 2 ? 'w-[112px]' : 'w-[80px]'} h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 hidden lg:flex`}>
+          <div className={`z-10 absolute right-0 bottom-0 mb-6 mr-6 ${supportedPlatformsLength > 2 ? 'w-[112px]' : 'w-[80px]'} h-[42px] bg-[#00000066] rounded-lg justify-center items-center gap-3 backdrop-blur-sm hidden lg:flex`}>
             {supportedPlatforms?.apple && (
               <img
                 className="object-fit"
