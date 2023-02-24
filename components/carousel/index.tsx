@@ -25,22 +25,21 @@ const SETTINGS = {
                 bottom: 0 !important;
                 position: relative !important;
                 margin-top: 0.8rem !important;
-             }
+              }
               div.slick-dots ul > li {
                 background: #D9D9D9 !important;
                 border-radius: 50% !important;
-                width: 8px !important;
-                height: 8px !important;
-             }
-             div.slick-dots ul > li:hover {
-              width: 14px !important;
-              height: 14px !important;
-           }
+                width: 14px !important;
+                height: 14px !important;
+              }
+              div.slick-dots ul > li:hover {
+                background: #a7a5a5 !important;
+              }
               div.slick-dots ul > li.slick-active {
                 background: linear-gradient(135deg, #BCEB00 15.57%, #00EAEA 84.88%) !important;
                 width: 14px !important;
                 height: 14px !important;
-             }
+              }
               div.slick-dots ul > li > button {
                 position: absolute !important;
                 width: 100% !important;
@@ -50,26 +49,26 @@ const SETTINGS = {
                 -moz-appearance: none !important;
                 background: transparen !importantt;
                 border: none !important;
-             }
+              }
               div.slick-dots ul > li > button:before {
                 content: none !important;
-             }
-             div.slick-slide {
-              border-radius: 24px;
-              overflow: hidden;
-             }
-             div.slick-list {
-              border-radius: 24px;
-              box-shadow: 0px 0px 80px rgb(91 23 85 / 20%);
-              background: rgb(91 23 85 / 10%);
-             }
-             .slick-arrow {
-              display: none !important;
-             }
-             .slick-track {
-              display: flex;
-              gap: 0.75rem;
-             }
+              }
+              div.slick-slide {
+                border-radius: 24px;
+                overflow: hidden;
+              }
+              div.slick-list {
+                border-radius: 24px;
+                box-shadow: 0px 0px 80px rgb(91 23 85 / 20%);
+                background: rgb(91 23 85 / 10%);
+              }
+              .slick-arrow {
+                display: none !important;
+              }
+              .slick-track {
+                display: flex;
+                gap: 0.75rem;
+              }
             `}</style>
           </div>
       )
