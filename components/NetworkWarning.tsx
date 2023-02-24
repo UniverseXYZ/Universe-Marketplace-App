@@ -1,12 +1,10 @@
 import useEnvChain from 'hooks/useEnvChain'
 import React from 'react'
-import { useNetwork, useSigner, useSwitchNetwork } from 'wagmi'
+import { useSwitchNetwork } from 'wagmi'
 
 const chainId = process.env.NEXT_PUBLIC_CHAIN_ID
 
 function NetworkWarning() {
-  const { chain: activeChain } = useNetwork()
-  const { data: signer } = useSigner()
   const chain = useEnvChain()
   const { switchNetworkAsync } = useSwitchNetwork({
     chainId: chainId ? +chainId : undefined,
@@ -14,7 +12,7 @@ function NetworkWarning() {
 
   const chainName = `${chain?.name} ${chain?.testnet ? 'Testnet' : ''}`
 
-  if (chainId && signer && activeChain?.id !== +chainId) {
+  if (chainId) {
     return (
       <div className="flex w-screen items-center justify-center gap-2 p-4 text-black"  style={{backgroundImage: 'linear-gradient(135deg, #BCEB00 15.57%, #00EAEA 84.88%)'}}>
         <span>You are connected to the wrong network.</span>
