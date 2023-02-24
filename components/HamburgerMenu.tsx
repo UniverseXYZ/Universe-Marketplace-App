@@ -10,14 +10,13 @@ import {
   useAccount,
   useConnect,
   useDisconnect,
-  useEnsAvatar,
-  useEnsName,
 } from 'wagmi'
 import { Balance } from './ConnectWallet'
 import EthAccount from './EthAccount'
 import ThemeSwitcher from './ThemeSwitcher'
 import * as Accordion from '@radix-ui/react-accordion';
 import Avatar from './Avatar'
+import useENSResolver from 'hooks/useENSResolver';
 
 type Props = {
   externalLinks: {
@@ -31,9 +30,14 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
   const { connectors } = useConnect()
   const accountData = useAccount()
   const { disconnect } = useDisconnect()
-  const { data: ensName } = useEnsName()
-  const { data: ensAvatar } = useEnsAvatar()
   const wallet = connectors[0]
+
+  const {
+    name: ensName,
+    avatar: ensAvatar,
+    shortAddress,
+    shortName: shortEnsName,
+  } = useENSResolver(accountData?.address);
 
   // @ts-ignore
   // eslint-disable-next-line react/display-name
@@ -95,6 +99,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                 side='left'
                 address={accountData.address}
                 avatarSize={40}
+                avatarClassName="bg-black"
                 ens={{
                   avatar: ensAvatar,
                   name: ensName,
