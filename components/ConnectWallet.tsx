@@ -4,8 +4,6 @@ import {
   useBalance,
   useConnect,
   useDisconnect,
-  useEnsAvatar,
-  useEnsName,
   Address,
 } from 'wagmi'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
@@ -16,6 +14,7 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import useMounted from 'hooks/useMounted'
 import Avatar from './Avatar'
 import { truncateAddress, truncateEns } from 'lib/truncateText'
+import useENSResolver from 'hooks/useENSResolver';
 
 const DARK_MODE = process.env.NEXT_PUBLIC_DARK_MODE
 const DISABLE_POWERED_BY_RESERVOIR =
@@ -23,12 +22,16 @@ const DISABLE_POWERED_BY_RESERVOIR =
 
 const ConnectWallet: FC = () => {
   const account = useAccount()
-  const { data: ensAvatar } = useEnsAvatar({ address: account?.address })
-  const { data: ensName } = useEnsName({ address: account?.address })
   const { connectors } = useConnect()
   const { disconnect } = useDisconnect()
   const wallet = connectors[0]
   const isMounted = useMounted()
+  const {
+    name: ensName,
+    avatar: ensAvatar,
+    shortAddress,
+    shortName: shortEnsName,
+  } = useENSResolver(account?.address);
 
   if (!isMounted) {
     return null
@@ -44,7 +47,7 @@ const ConnectWallet: FC = () => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger className="flex items-center ml-auto rounded-full focus-visible:outline-none border-transparent p-0 normal-case">
-        <Avatar address={account.address} avatar={ensAvatar} size={40} />
+        <Avatar address={account.address} avatar={ensAvatar} size={40} className="bg-black" />
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Content align="end" sideOffset={6}>
