@@ -245,7 +245,7 @@ export const getStaticProps: GetStaticProps<{
     includeTopBid: true,
     includeAttributes: true,
     includeDynamicPricing: true,
-    normalizeRoyalties: true,
+    normalizeRoyalties: false,
   }
 
   const href = setParams(url, query)

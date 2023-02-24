@@ -240,7 +240,7 @@ export const getStaticProps: GetStaticProps<{
 
   let query: paths['/users/{user}/tokens/v6']['get']['parameters']['query'] = {
     limit: 20,
-    normalizeRoyalties: true,
+    normalizeRoyalties: false,
   }
 
   if (COLLECTION_SET_ID) {

@@ -19,7 +19,7 @@ type Props = {
 const UserTokensGrid: FC<Props> = ({ fallback, owner }) => {
   const userTokensParams: Parameters<typeof useUserTokens>['1'] = {
     limit: 20,
-    normalizeRoyalties: true,
+    normalizeRoyalties: false,
   }
   if (COLLECTION_SET_ID) {
     userTokensParams.collectionsSetId = COLLECTION_SET_ID

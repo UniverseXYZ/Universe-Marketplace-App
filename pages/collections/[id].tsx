@@ -294,7 +294,7 @@ export const getStaticProps: GetStaticProps<{
     {
       id,
       includeTopBid: true,
-      normalizeRoyalties: true,
+      normalizeRoyalties: false,
     }
 
   setParams(collectionUrl, collectionQuery)
@@ -313,7 +313,7 @@ export const getStaticProps: GetStaticProps<{
     includeTopBid: false,
     limit: 20,
     includeDynamicPricing: true,
-    normalizeRoyalties: true,
+    normalizeRoyalties: false,
   }
 
   setParams(tokensUrl, tokensQuery)
