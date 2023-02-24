@@ -59,7 +59,7 @@ const ProductsDropdown: FC = () => {
                 <Avatar address={''} avatar={'/icons/main-nav/nft-torrent.svg'} size={40} />
                 <div>
                   <p className='text-[14px] leading-6 font-medium'>NFT Torrent</p>
-                  <p className='text-[12px] leading-4 text-[#00000066]'>Safely mint,seed and store your files</p>
+                  <p className='text-[12px] leading-4 text-[#00000066]'>Safely mint, seed and store your files</p>
                 </div>
             </div>
             </DropdownMenu.Item>
