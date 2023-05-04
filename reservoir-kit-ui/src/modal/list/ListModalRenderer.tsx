@@ -94,7 +94,7 @@ const isCurrencyAllowed = (
       return true
     }
     switch (marketplace.orderbook) {
-      case 'universe':
+      case 'reservoir':
         return true
       case 'opensea':
         return openseaPaymentTokens.some(
@@ -205,7 +205,7 @@ export const ListModalRenderer: FC<Props> = ({
     })
     const hasNonNativeMarketplace = updatedMarketplaces.find(
       (marketplace) =>
-        marketplace.isSelected && marketplace.orderbook !== 'universe'
+        marketplace.isSelected && marketplace.orderbook !== 'reservoir'
     )
     if (hasNonNativeMarketplace) {
       setQuantity(1)
@@ -280,7 +280,7 @@ export const ListModalRenderer: FC<Props> = ({
     if (marketplaces) {
       setLocalMarketplace(
         marketplaces.find(
-          (marketplace) => marketplace.orderbook === 'universe'
+          (marketplace) => marketplace.orderbook === 'reservoir'
         ) || null
       )
     } else {
@@ -297,7 +297,7 @@ export const ListModalRenderer: FC<Props> = ({
           marketplaces.map((marketplace) => {
             return {
               ...marketplace,
-              isSelected: marketplace.orderbook === 'universe',
+              isSelected: marketplace.orderbook === 'reservoir',
             }
           })
         )

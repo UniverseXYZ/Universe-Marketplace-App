@@ -145,7 +145,7 @@ export function ListModal({
         useEffect(() => {
           if (stepData) {
             const isNativeOrder =
-              stepData.listingData.marketplace.orderbook === 'universe'
+              stepData.listingData.marketplace.orderbook === 'reservoir'
             const isSeaportOrder =
               stepData.listingData.marketplace.orderKind === 'seaport'
             const marketplaceName =
@@ -223,7 +223,7 @@ export function ListModal({
         }, [transactionError])
 
         const availableMarketplaces = marketplaces.filter((market) => {
-          const isNative = market.orderbook === 'universe'
+          const isNative = market.orderbook === 'reservoir'
           return nativeOnly
             ? market.listingEnabled && isNative
             : market.listingEnabled
@@ -234,7 +234,7 @@ export function ListModal({
         )
         const quantitySelectionAvailable = selectedMarketplaces.every(
           (marketplace) =>
-            marketplace.orderbook === 'universe' ||
+            marketplace.orderbook === 'reservoir' ||
             marketplace.orderbook === 'opensea'
         )
 
@@ -376,7 +376,7 @@ export function ListModal({
                     )}
                     {availableMarketplaces
                       .filter(
-                        (marketplace) => marketplace.orderbook !== 'universe'
+                        (marketplace) => marketplace.orderbook !== 'reservoir'
                       )
                       .map((marketplace) => (
                         <Box key={marketplace.name} css={{ mb: '$3' }}>
